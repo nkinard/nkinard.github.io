@@ -2,21 +2,24 @@
 
 /* Structure */
 body {
-    background-color:#595022;
+    background-color:#F2E8DF;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #content {
-    background-color: #F2B988;
-    color: #595022;
+    background-color: #75A3BF;
+    color: #403001;
     width: 70%;
     margin:auto;
     padding: 5px;
-    border: 1px solid #D93E30;
+    border: 1px solid #25261A;
     border-radius:5px;
 }
 
 header, footer {
+    background-color: #737166;
+    color: #F2E8DF;
+    text-align:center;
     padding: 5px;
 }
 
@@ -30,14 +33,14 @@ header, footer {
 }
 
 #assignments-list a{
-    color: #D93E30;
+    color: #F2E8DF;
     text-decoration: none;
     border-bottom: 1px solid transparent;
 }
 
 #assignments-list a:hover{
-    color: #402401;
-    border-bottom: 1px solid #402401;
+    color: #F2D888;
+    border-bottom: 1px solid #F2D888;
 }
 
 /* Typography */
