@@ -27,7 +27,7 @@ header, footer {
 
 #main-nav li {
     list-style-type: none; /* remove the bullets*/
-    display: inline-block;
+    display: inline-block; 
 }
 
 #main-nav a {

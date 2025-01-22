@@ -1,0 +1,50 @@
+/* code by Nicholas Kinard - CSCE 242 Section 001 */
+
+/* Structure */
+body {
+    background-color:#595022;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#content {
+    background-color: #F2B988;
+    color: #595022;
+    width: 70%;
+    margin:auto;
+    padding: 5px;
+    border: 1px solid #D93E30;
+    border-radius:5px;
+}
+
+header, footer {
+    padding: 5px;
+}
+
+/* Assignments */
+#assignments-list ul{
+    padding-left: 0;
+}
+
+#assignments-list li{
+    list-style-type: none;
+}
+
+#assignments-list a{
+    color: #D93E30;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+#assignments-list a:hover{
+    color: #402401;
+    border-bottom: 1px solid #402401;
+}
+
+/* Typography */
+header h1{
+    text-align: center;
+}
+
+footer p{
+    text-align: center;
+}

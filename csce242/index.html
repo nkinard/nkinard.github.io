@@ -3,20 +3,31 @@
     <head>
         <!--CSCE 242 Section 001 - Nicholas Kinard-->
         <title>CSCE242</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>CSCE 242 - Web Applications</h1>
-        <h2>Nicholas Kinard</h2>
-        <p>
-            Description:
-            This class teaches students to utilize HTML and CSS to create the front-end of a website.
-            Students will also use JavaScript to allow for interactions and server side scripting to pull data from a server.
-        </p>
-        
-        <h2>Assignments</h2>
-        <ul>
-            <a href="assignments\assignment01\index.html"><li>Assignment 1: Basic HTML</li></a>
-            <a href="assignments\assignment02\index.html"><li>Assignment 2: Basic CSS</li></a>
-        </ul>
+        <div id="content">
+            <header>
+                <h1>CSCE 242 - Web Applications</h1>
+                <h2>Nicholas Kinard</h2>
+                <p>
+                    Description:
+                    This class teaches students to utilize HTML and CSS to create the front-end of a website.
+                    Students will also use JavaScript to allow for interactions and server side scripting to pull data from a server.
+                </p>
+            </header>
+            <main>
+                <h2>Assignments</h2>
+                <div id="assignments-list">
+                    <ul>
+                       <li><a href="assignments\assignment01\index.html">Assignment 1: Basic HTML</a></li>
+                       <li><a href="assignments\assignment02\index.html">Assignment 2: Basic CSS</a></li>
+                    </ul>
+                </div>
+            </main>
+            <footer>
+                <p>&copy; Nicholas Kinard</p>
+            </footer>
+        </div>
     </body>
 </html>
