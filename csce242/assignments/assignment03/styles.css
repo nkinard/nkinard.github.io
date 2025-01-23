@@ -1,0 +1,97 @@
+/* code by Nicholas Kinard - CSCE 242 Section 001 */
+/* Structure */
+body{
+    background-color: blanchedalmond;
+    border:2px solid #A4BFB8;
+    margin:0;
+}
+
+#content {
+    background-color: blanchedalmond;
+    margin:auto;
+    width: 100%;
+}
+
+#main-header {
+    color:teal;
+}
+
+#main-content {
+    background-color: blanchedalmond;
+    padding: 5px;
+}
+
+#main-content h2 {
+    margin: auto;
+    width: 80%;
+}
+
+.flex-container .section-style-1, 
+.flex-container .section-style-2 {
+    margin: auto;
+    width: 80%;
+}
+
+.section-style-1 {
+    background-color:teal;
+}
+
+.section-style-2 {
+    background-color: lightcoral;
+}
+
+#main-footer {
+    background-color: blanchedalmond;
+    padding: 5px;
+}
+
+/* Navigation */
+#main-nav ul {
+    padding-left: 0;
+}
+
+#main-nav li {
+    list-style-type: none;
+    padding: 5px;
+    background-color: lightcoral;
+    border: 1px solid teal;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Typography */
+body {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#main-header h1{
+    text-align:center;
+}
+
+#main-content h2 {
+    color: teal;
+}
+
+#main-footer p{
+    text-align: center;
+}
+
+#main-nav {
+    text-align: center;
+}
+
+/* Larger Resolutions */
+@media (min-width: 900px) {
+
+    #main-nav ul{
+        display: flex;
+    }
+
+    #main-nav li,  
+    .col1of2, .col1of3, .col1of4 {
+        flex: 1;
+    }
+}
