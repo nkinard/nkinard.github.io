@@ -8,8 +8,8 @@ body {
 
 #content {
     background-color: #75A3BF;
-    color: #403001;
-    width: 70%;
+    color: #F2E8DF;
+    width: 90%;
     margin:auto;
     padding: 5px;
     border: 1px solid #25261A;
@@ -23,22 +23,37 @@ header, footer {
     padding: 5px;
 }
 
-/* Assignments */
-#assignments-list ul{
+.flex-container, .column {
+    text-align: center;
+}
+
+.column {
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #737166;
+}
+
+/* Work List */
+#work-list h2 {
+    text-align: center;
+}
+
+#work-list ul{
     padding-left: 0;
 }
 
-#assignments-list li{
+#work-list li{
     list-style-type: none;
 }
 
-#assignments-list a{
+#work-list a{
     color: #F2E8DF;
     text-decoration: none;
     border-bottom: 1px solid transparent;
 }
 
-#assignments-list a:hover{
+#work-list a:hover{
     color: #F2D888;
     border-bottom: 1px solid #F2D888;
 }
@@ -50,4 +65,28 @@ header h1{
 
 footer p{
     text-align: center;
+}
+
+/* Larger Resolutions */
+@media (min-width: 900px) {
+    #main-nav ul, 
+    .flex-container {
+        display: flex;
+    }
+
+    #main-nav li, .column {
+        flex: 1;  
+    }
+
+    #main-header h2 {
+        position: relative;
+        bottom: 90px;
+        text-align:left;
+    }
+
+    #main-header p {
+        position: relative;
+        bottom: 60px;
+        margin-bottom: -30px;
+    }
 }
