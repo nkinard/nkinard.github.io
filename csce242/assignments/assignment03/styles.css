@@ -3,7 +3,7 @@
 body{
     background-color: blanchedalmond;
     border:2px solid #A4BFB8;
-    margin:0;
+    margin:0%;
 }
 
 #content {
@@ -18,7 +18,6 @@ body{
 
 #main-content {
     background-color: blanchedalmond;
-    padding: 5px;
 }
 
 #main-content h2 {
@@ -26,18 +25,34 @@ body{
     width: 80%;
 }
 
-.flex-container .section-style-1, 
-.flex-container .section-style-2 {
-    margin: auto;
-    width: 80%;
-}
+.flex-container {
+    display:flex;
+    flex-wrap: wrap;
+} 
 
 .section-style-1 {
-    background-color:teal;
+    margin: auto;
+    width: 80%;
+    background-color:teal;  
 }
 
 .section-style-2 {
+    margin: auto;
+    width: 80%;
     background-color: lightcoral;
+}
+
+.section-style-1 img, .section-style-2 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;   
+}
+
+.column1 {
+    background-color: teal;
+    margin: 0;
+    width: 100%;
 }
 
 #main-footer {
@@ -72,26 +87,76 @@ body {
 }
 
 #main-content h2 {
+    padding: 5px;
     color: teal;
 }
 
 #main-footer p{
     text-align: center;
+    color: teal;
 }
 
 #main-nav {
     text-align: center;
 }
 
+.section-style-1 h3, p {
+    color: blanchedalmond;
+    padding: 5px;
+}
+
+.section-style-2 h3, p {
+    color: blanchedalmond;
+    padding: 5px;
+}
+
+.column1 {
+    text-align: center;
+}
+
+.column1 h3, p{
+    color: white;
+    padding: 5px;
+}
+
+.column1 img {
+    text-align: center;
+}
+
 /* Larger Resolutions */
 @media (min-width: 900px) {
 
-    #main-nav ul{
+    #main-nav ul {
         display: flex;
     }
 
-    #main-nav li,  
-    .col1of2, .col1of3, .col1of4 {
+    #main-nav li {
         flex: 1;
+    }
+
+    .flex-container {
+        display:flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .section-style-1, .section-style-2{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .section-style-1 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .text-1, .text-2{
+        flex: 1;
+    }
+
+    .column1 { 
+        flex: 1;   
+        padding:10px;
     }
 }
