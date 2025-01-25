@@ -21,7 +21,7 @@
     border-radius: 2px;
 }
 
-.col1of2 {
+.col1of2, .col2of2, .col3of2 {
     background-color: antiquewhite;
 }
 
@@ -83,7 +83,15 @@ body {
         flex: 1;
     }
 
+    .col2of2 {
+        flex:1;
+    }
+
+    .col3of2 {
+        flex:2;
+    }
+
     .col2of3, .col2of4{
-        flex: 2;
+        flex: 3;
     }
 }
