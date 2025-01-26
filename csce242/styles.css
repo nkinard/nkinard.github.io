@@ -34,10 +34,6 @@ header, footer {
 }
 
 /* Work List */
-#work-list {
-    justify-content: space-evenly; /*just so smaller resolutions get a good view */
-}
-
 #work-list h2 {
     text-align: center;
 }
@@ -82,7 +78,8 @@ footer p{
     }
 
     .column {
-        flex: 1;  
+        flex: 30%;
+        flex-grow: 0;  
     }
 
     #main-header h2 {

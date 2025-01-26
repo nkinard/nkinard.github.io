@@ -136,11 +136,12 @@ body {
     padding: 5px;
 }
 
-.part1-flex h4, p {
+.part1-flex h4, p, 
+.part2-flex h4, p{
     color:white;
 }
 
-.part1-flex h4 {
+.part1-flex h4, .part2-flex h4{
     text-align: center;
 }
 
@@ -179,22 +180,25 @@ body {
     }
 
     .part1 {
-        flex:2;
+        flex:30%;
     }
 
     .part1-flex {
-        flex:1;
+        flex:30%;
+        flex-grow:0;
+    }
+
+    .part2-flex {
+        flex: 30%;
+        flex-grow:0;
+
     }
 
     .part2 {
-        flex:1;
+        flex:10%;
     }
 
     .part3 {
-
-        flex:3;
+        flex:50%;
     }
-
-   
-
 }
