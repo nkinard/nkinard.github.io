@@ -180,22 +180,24 @@ body {
     }
 
     .part1 {
-        flex:30%;
+        flex:33%;
     }
 
     .part1-flex {
         flex:30%;
         flex-grow:0;
+        padding: 5px;
     }
 
     .part2-flex {
         flex: 30%;
         flex-grow:0;
-
+        padding: 5px;
     }
 
     .part2 {
         flex:10%;
+        flex-grow: 0;
     }
 
     .part3 {
