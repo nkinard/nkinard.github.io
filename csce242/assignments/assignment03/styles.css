@@ -167,7 +167,6 @@ body {
     .section-style-1, .section-style-2{
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
     }
 
     .section-style-1 {
