@@ -1,0 +1,125 @@
+/* Structure */
+body {
+    background: url(images/ocean.jpg);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#content {
+    background: lightgray;
+    width: 70%;
+    margin:auto; /* center */
+    border: 1px solid burlywood;
+    border-radius:5px;
+}
+
+header, footer {
+    background: burlywood;
+    color: white;
+}
+
+.idea {
+    padding:5px;
+    background:burlywood;
+}
+
+.idea:nth-child(odd) {
+    background-color:lightseagreen;
+}
+
+.idea img{
+    margin-top:20px;
+    padding:5px;
+    display:block;
+    margin:auto;
+}
+
+.secondpiece {
+    margin-top: 20px;
+}
+
+.gallery {
+    background:burlywood;
+}
+
+.links {
+    background:lightseagreen;
+}
+
+.tile, .node {
+    text-align:center;
+    padding:5px;
+}
+
+/* Navigation */
+#main-nav ul{
+    padding-left: 0;
+}
+
+#main-nav li {
+    list-style-type: none; /* remove the bullets*/
+    background-color:lightseagreen;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+#main-nav a {
+    color: white;
+    text-decoration: none; /* remove the underline */
+    border-bottom: 1px solid transparent;
+}
+
+#main-nav a:hover{
+    color:lightcoral;
+}
+
+/* Tables */
+
+/* Typography */
+header h1 {
+    text-align:center;
+}
+footer p{
+    text-align:center;
+}
+
+/*always be at the very end */
+/* Larger screens */
+@media only screen and (min-width: 932px) {
+    .columns {
+        display: flex;
+    }
+
+    #main-nav li {
+        flex:1;
+    }
+
+    #main-nav li:not(:last-child) {
+        border-right:1px solid black;
+    }
+
+    .gallery {
+        flex-wrap:wrap;
+        justify-content: space-between;
+    }
+
+    .one {
+        flex:1;
+    }
+
+    .two {
+        flex:2;
+    }
+
+    .three {
+        flex:3;
+    }
+
+    .tile {
+        flex-basis:45%;
+    }
+
+    .node {
+        flex-basis:30%;
+    }
+
+}
