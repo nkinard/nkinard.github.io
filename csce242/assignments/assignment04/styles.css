@@ -1,0 +1,51 @@
+/* Structure */ 
+body {
+}
+
+header {
+    background-color:black;
+}
+
+header h1 {
+    color:white;
+    background-color:crimson;
+}
+
+
+/* Navigation */
+#main-nav {
+    background-color: black;
+}
+
+#main-nav ul{
+    padding-left: 0;
+}
+
+#main-nav li {
+    list-style-type: none;
+    display: inline-block; 
+}
+
+#main-nav a, li {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+#main-nav a:hover{
+    color:crimson;
+    border-bottom: 1px solid white;
+}
+
+/* Typography */
+
+/* Larger Resolutions */
+@media (min-width: 900px) {
+    #main-nav ul {
+        display: flex;
+        justify-content: flex-end;
+        gap:10px;
+        font-size: 80%;
+    }
+
+}
