@@ -7,22 +7,20 @@
     --borders-color: black;
     --primary-font-color: black;
     --secondary-font-color: #ADD8E6;
+    --paragraph-alternate-box-color: #DCDCDC;
 }
 
 body {
     font-family:Arial, Helvetica, sans-serif;
 }
 
-/* Header */
-header {
+#main-content {
+    width: 85%;
+    margin-left:auto;
+    margin-right:auto;
 }
 
-/* body */
-
-body {
-}
-
-/* main page body */
+/* main page Specific */
 
 .image-slider {
     border: 1px solid var(--borders-color);
@@ -67,39 +65,69 @@ body {
     color: var(--secondary-font-color);
 }
 
-.mainpage-paragraph-box, .mainpage-list-box {
+/* Paragraph Page Blocks */
+.page-paragraph-box, .page-list-box, .page-paragraph-box-alternate {
     margin: 10px;
 }
 
-.mainpage-list-box {
+.page-paragraph-box-alternate h2{
+    text-align: right;
+}
+
+.page-paragraph-content:nth-child(even) {
+    background-color: var(--paragraph-alternate-box-color);
+}
+
+.page-list-box {
     padding: 5px;
     border: 1px solid var(--borders-color);
+    margin-top: 20px;
 }
 
-.mainpage-list-box h3 {
+.page-list-box h3 {
     padding-left: 25px;
 }
 
-.mainpage-list-box ul {
+.page-list-box ul {
     padding-left: 25px;
 }
 
-.mainpage-list-box li {
+.page-list-box li {
     list-style-type: none;
     padding: 10px;
 }
 
-/* Guide Page */
-.guidepage-image img{
-    margin-top: 30px;
-    margin-top: 30px;
+.page-image-box {
+    margin: 20px;
+}
+
+.page-image-box img {
+    border-radius: 25px;
+    border: 1px solid var(--borders-color);
     display: block;
     margin-left: auto;
     margin-right: auto;
     border-radius: 25px;
+    margin-top: 15px;
 }
 
-/* Main Navigation */
+/* Guide Page Specific */
+.guidepage-image img{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    max-width: 100%;
+    border: 1px solid var(--borders-color);
+}
+
+.guidepage-ending h2 {
+    text-align: center;
+}
+
+/* Main Navigation Home Page*/
 #main-nav ul{
     padding-left: 0;
 }
@@ -120,8 +148,8 @@ body {
 }
 
 /* Typography */
-.mainpage-paragraph-box p {
-    font-size: 20px;
+.page-paragraph-box p, .page-paragraph-box-alternate p{
+    font-size: 18px;
 }
 
 /* Larger Resolutions */
@@ -160,26 +188,19 @@ body {
         object-fit: fill;
     }
 
-    .mainpage-paragraph-box {
+    .page-paragraph-box {
         flex: 60%;
     }
 
-    .mainpage-list-box {
+    .page-list-box {
         flex: 40%;
     }   
 
-    .guide-images {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
     .guidepage-image {
-        text-align: center;
-        flex:25%;
-        flex-grow: 0;
-        flex-basis: 25%;
-        margin-right: 30px;
-        margin-left: 30px;
+        flex:1;
+        flex-wrap:wrap;
+        max-width:100%;
+        margin-left:20px;
+        margin-right:20px;
     }
-
 }
