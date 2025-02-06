@@ -28,11 +28,16 @@ header, footer {
     background-color: var(--alternate-color);
 }
 
+.block p {
+    padding-left: 10px;
+}
+
 #star {
     margin:0;
     padding:0;
     font-size:100px;
     color:#808080;
+    text-align: center;
 }
 
 /* Typography */
@@ -48,6 +53,10 @@ footer p{
 
 .block h3 {
     text-align:center;
+}
+
+.block p {
+    text-align: left;
 }
 
 /* Larger Resolutions */

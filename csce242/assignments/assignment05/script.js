@@ -9,10 +9,9 @@ document.getElementById("color-picker").oninput = () => {
 };
 
 document.getElementById("image-change").onclick = () => {
-    const randomnum = Math.floor(Math.random() * 10);
-    const tag = ".jpg";
-    const newimg = "images/img"+randomnum+tag;
-    console.log(newimg);
+    const randomnum = Math.floor(Math.random() * 100);
+    const tag = "/200/200";
+    const front = "https://picsum.photos/id/"
+    const newimg = front+randomnum+tag;
     document.getElementById("image-change").src = newimg;
 };
-
