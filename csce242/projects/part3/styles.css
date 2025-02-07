@@ -1,6 +1,7 @@
 /* Structure */
 :root {
     --main-background-color:white;
+    --secondary-background-color: #ADD8E6;
     --homepage-block-color: #808080;
     --main-nav-font-color: black;
     --main-nav-fonthover-color: #ADD8E6; 
@@ -14,13 +15,17 @@ body {
     font-family:Arial, Helvetica, sans-serif;
 }
 
+footer {
+    text-align: center;
+}
+
 #main-content {
     width: 85%;
     margin-left:auto;
     margin-right:auto;
 }
 
-/* main page Specific */
+/* Main page Specific */
 
 .image-slider {
     border: 1px solid var(--borders-color);
@@ -39,35 +44,37 @@ body {
     border: 1px solid var(--borders-color);
 }
 
-.homepage-block {
+.page-button-block {
     text-align: center;
     background-color: var(--homepage-block-color);
     border-radius: 10px;
     margin-top: 30px;
-    width: 300px;
-    height: 200px;
+    max-width: 300px;
+    max-height: 200px;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.homepage-block img{
+.page-button-block img{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-.homepage-block a {
+.page-button-block a {
     text-decoration: none;
     color: var(--primary-font-color);
 }
 
-.homepage-block a:hover {
+.page-button-block a:hover {
     color: var(--secondary-font-color);
 }
 
 /* Paragraph Page Blocks */
 .page-paragraph-box, .page-list-box, .page-paragraph-box-alternate {
-    margin: 10px;
+    margin-left:10px;
+    margin-right:10px;
+    padding-bottom: 10px;
 }
 
 .page-paragraph-box-alternate h2{
@@ -78,10 +85,14 @@ body {
     background-color: var(--paragraph-alternate-box-color);
 }
 
+.page-paragraph-content {
+    padding-bottom: 15px;
+}
+
 .page-list-box {
-    padding: 5px;
     border: 1px solid var(--borders-color);
     margin-top: 20px;
+    border-radius: 25px;
 }
 
 .page-list-box h3 {
@@ -112,29 +123,101 @@ body {
 }
 
 /* Guide Page Specific */
-.guidepage-image img{
-    margin-top: 30px;
-    margin-bottom: 30px;
+.guidepage-ending h2 {
+    text-align: center;
+}
+
+.fourpage-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* four image container */
+.four-image-box img{
     display: block;
+    max-width: 100%;
+    height:auto;
+    margin-top:10px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 25px;
-    max-width: 100%;
+    border:1px solid var(--borders-color);
+}
+
+/* Library Page */
+.page-buttons h2 {
+    text-align: center;
+}
+
+#fishlib, #flylib {
+    padding:15px;
+    padding-bottom:50px;
+}
+
+#fishlib {
+    border-bottom: 3px solid var(--borders-color);
+}
+
+/* Spotlight Page */
+#spotlightlib {
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+
+#btn-submit {
+    width:100%;
+    background-color: var(--secondary-background-color);
+    cursor:pointer;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.submissions {
+    height:fit-content;
+    padding-bottom:0;
+}
+
+/* About Me Page */
+.aboutme-img img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 25px;
     border: 1px solid var(--borders-color);
 }
 
-.guidepage-ending h2 {
+.aboutme h2 {
     text-align: center;
+}
+
+.contact-box1 p, .contact-box2 p {
+    padding-left:15px;
+}
+
+.contact-box1 section, .contact-box2 section{
+    margin:20px;
+}
+
+.contact-box1 img, .contact-box2 img {
+    padding-right:10px;
+}
+
+/* Arrows for Images */
+.arrows-box {
+    display: none;
+    cursor: pointer;
 }
 
 /* Main Navigation Home Page*/
 #main-nav ul{
     padding-left: 0;
+    text-align: center;
 }
 
 #main-nav li {
-    list-style-type: none; /* remove the bullets*/
+    list-style-type: none;
     padding-top: 5px;
+    border-bottom: 1px solid var(--borders-color);
 }
 
 #main-nav a {
@@ -152,6 +235,10 @@ body {
     font-size: 18px;
 }
 
+.homepage-block h3 {
+    font-size: 100%;
+}
+
 /* Larger Resolutions */
 @media (min-width: 768px) {
 
@@ -161,7 +248,13 @@ body {
 
     #main-nav ul {
         display:flex;
-        justify-content:space-evenly;
+        justify-content: space-evenly;
+        margin-left:10%;
+        margin-right:10%;
+    }
+
+    #main-nav li {
+        border-bottom: hidden;
     }
 
     .header-logo {
@@ -173,16 +266,19 @@ body {
         padding-top: 20px;
     }
 
-    .homepage-block {
-        text-align: center;
-        flex:25%;
-        flex-grow: 0;
-        flex-basis: 25%;
-        margin-right: 30px;
-        margin-left: 30px;
+    .four-img-stack {
+        display: flex;
+        justify-content: space-between;
     }
 
-    .homepage-block img {
+    .page-button-block {
+        flex:1;
+        margin-left:10px;
+        margin-right:10px;
+        align-items: center;
+    }
+
+    .page-button-block img {
         width: 100%;
         height: 60%;
         object-fit: fill;
@@ -196,11 +292,42 @@ body {
         flex: 40%;
     }   
 
+    .four-image-box {
+        flex:1;
+        text-align: center;
+        justify-content: space-between;
+        margin: 5px;
+        margin-top: 20px;
+        margin-bottom:20px;
+    }
+
     .guidepage-image {
         flex:1;
         flex-wrap:wrap;
         max-width:100%;
-        margin-left:20px;
-        margin-right:20px;
+    }
+
+    .arrows-box {
+        display:block;
+        margin-top:auto;
+        margin-bottom:auto;
+    }
+
+    .page-buttons h2 {
+        text-align: left;
+    }
+
+    .aboutme h2 {
+        text-align: left;
+    }
+
+    .aboutme-img {
+        display:flex;
+        align-items: center;
+        margin:20px;
+    }
+
+    .contact-box1 , .contact-box1{
+        flex:1;
     }
 }
