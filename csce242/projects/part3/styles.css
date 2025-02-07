@@ -230,6 +230,20 @@ footer {
     color: var(--main-nav-fonthover-color);
 }
 
+/* Pop Up */
+/* code help from W3 Schools */
+#modal-popup {
+    position: fixed;
+    background-color: var(--main-background-color);
+    border:1px solid var(--borders-color);
+    padding:10px;
+    z-index: 1;
+    left:7.5%;
+    top:0;
+    width:80%;
+    height:100%;
+}
+
 /* Typography */
 .page-paragraph-box p, .page-paragraph-box-alternate p{
     font-size: 18px;
@@ -327,7 +341,11 @@ footer {
         margin:20px;
     }
 
-    .contact-box1 , .contact-box1{
+    .contact-box1 , .contact-box1 {
+        flex:1;
+    }
+
+    .contact-box3 {
         flex:1;
     }
 }
