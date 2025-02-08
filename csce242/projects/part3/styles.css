@@ -232,15 +232,15 @@ footer {
 
 /* Pop Up */
 /* code help from W3 Schools */
-#modal-popup {
+.modal-style {
     position: fixed;
     background-color: var(--main-background-color);
     border:1px solid var(--borders-color);
     padding:10px;
     z-index: 1;
-    left:11.5%;
+    left:8.5%;
     top:0;
-    width:75%;
+    width:85%;
     height:100%;
     overflow:auto;
 }
@@ -254,12 +254,21 @@ footer {
 
 .x-button {
     position:relative;
-    left:99%;
-    font-size:25px;
+    left:98%;
+    font-size:48px;
+    cursor:pointer;
 }
 
 .hide {
     display:none;
+}
+
+.spotlight-text {
+    flex:1;
+}
+
+.spotlight-map {
+    flex:3;
 }
 
 /* Typography */
@@ -269,6 +278,18 @@ footer {
 
 .homepage-block h3 {
     font-size: 100%;
+}
+
+.modal-style h2 {
+    font-size: 32px;
+}
+
+.modal-style p {
+    font-size: 28px;
+}
+
+.rating-text h3{
+    font-size:58px;
 }
 
 /* Larger Resolutions */
@@ -308,6 +329,7 @@ footer {
         margin-left:10px;
         margin-right:10px;
         align-items: center;
+        cursor:pointer;
     }
 
     .page-button-block img {
