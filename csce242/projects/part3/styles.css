@@ -238,10 +238,28 @@ footer {
     border:1px solid var(--borders-color);
     padding:10px;
     z-index: 1;
-    left:7.5%;
+    left:11.5%;
     top:0;
-    width:80%;
+    width:75%;
     height:100%;
+    overflow:auto;
+}
+
+.modal-box-content img {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%; 
+}
+
+.x-button {
+    position:relative;
+    left:99%;
+    font-size:25px;
+}
+
+.hide {
+    display:none;
 }
 
 /* Typography */
