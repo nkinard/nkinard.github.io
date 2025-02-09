@@ -1,186 +1,472 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Project Website</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div id="content">
-            <header>
-                <section class="header-logo">
-                    <img src="https://fakeimg.pl/100x100" alt="logo">
-                    <h1>The Carolinian Flycaster</h1>
-                </section>
-                <nav id="main-nav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="guide.html">Fly Fishing Guide</a></li>
-                        <li><a href="library.html">Fish and Fly Library</a></li>
-                        <li><a href="spotlight.html">Fisherman's Spotlight</a></li>
-                        <li><a href="about.html">About Me</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <main id="main-content">
-                <!--Code Help From W3 Schools-->
-                <div id="modal-fish" class="modal-style hide">
-                    <div class="modal-header">
-                        <span class="x-button">&times;</span>
-                    </div>
-                    <div class="modal-box-content">
-                        <img src="https://fakeimg.pl/900x250" alt="logo">
-                        <h2>Trout</h2>
-                        <section class="f-container">
-                            <p>
-                                Trout are a very sought after species of fish in the Carolinas. 
-                                There are many species of trout such as rainbow and brown, both with their 
-                                own vibrant colors. These fish are mainly found in cooler waters such as streams
-                                and rivers in the mountains. To find these kind of fish, you are going to want to
-                                go to higher elevations such as the Appalachian mountains. Due to the 
-                                elevations you may experience, these fish are most enjoyable to catch in the spring and fall time. 
-                            </p>
-                            <img src="https://fakeimg.pl/300x150" alt="placeholder">
-                        </section>
-                        <section>
-                            <h2>What Flies to Use</h2>
-                            <p>
-                                Trout are wild fish that love to fish on the natural food sources in the water. 
-                                In the early Spring and Fall, trout love to bite on nymphs, which are imitations
-                                of immature stages of aquatic insects. During hatch times, it is more relevant to 
-                                use dry flies, which imitate more adult insects. If you want to attract larger trout, 
-                                you can try to use streamers, which imitate bigger aquatic prey like baitfish and crayfish. 
-                            </p>
-                        </section>
-                        <section>
-                            <h2>Top Spots to Find Them</h2>
-                            <p>
-                                In the Carolinas, trout are best find in the mountain tops of Appalachia. In North Carolina, 
-                                rivers like the Nantahala and Watauga are prime spots. In South Carolina, the Chattooga River 
-                                in the right season can prove to be very rewarding for trout fishing.
-                            </p>
-                        </section>
-                    </div>
-                </div>
-                <!--Code Help From W3 Schools-->
-                <div id="modal-fly" class="modal-style hide">
-                    <div class="modal-header">
-                        <span class="x-button">&times;</span>
-                    </div>
-                    <div class="modal-box-content">
-                        <img src="https://fakeimg.pl/900x250" alt="logo">
-                        <h2>Dry Fly</h2>
-                        <section class="f-container">
-                            <p>
-                                Dry flies are a fly that imitate an adult insect.
-                                This technique of fly fishing is best during seasons of insect hatches, 
-                                when the fish are actively feeding on adult flies. Selecting the right fly pattern 
-                                based on the water and ecosystem is key to making them effective. To cast, simply 
-                                cast the fly out and make sure it sits carefully on the water, just as an adult fly would. 
-                            </p>
-                            <img src="https://fakeimg.pl/300x150" alt="placeholder">
-                        </section>
-                        <section>
-                            <h2>Main Purpose and Varieties</h2>
-                            <p>
-                                Dry flies are best used to imitate the adult stage of an aquatic insect. 
-                                Some common flies in the Carolinas include mayflies, toneflies, and caddisflies. These 
-                                flies are meant to drift on top of the water to feed, and then attract
-                                fish that like to feed on the surface. Make sure to choose the right fly based on your local environment.
-                                Some variables that can attribute to choosing the right fly include the season, 
-                                the color of the water, the color of the environment, and what fish might lurk. 
-                            </p>
-                        </section>
-                        <section>
-                            <h2>Top Fish to Use Them For</h2>
-                            <p>
-                                Top fish in the Carolinas that eat dry flies are fish like brown and rainbow trout. 
-                                These fish love to surface feed on hatching insects. The best seasons are often in the 
-                                Spring and Fall times. Another common fish to get are  smallmouth bass, however they 
-                                are not as unique. 
-                            </p>
-                        </section>
-                    </div>
-                </div>
-
-                <div class="page-paragraph-content">
-                    <section class="f-container">
-                        <div class="page-paragraph-box">
-                            <h2>The Complete Fish and Fly Library of the Carolinas</h2>
-                            <p>
-                                Welcome to the Fish and Fly Library, a 
-                                comprehensive resource giving quick information 
-                                on fishes and flies to see and use in the Carolinas. 
-                            </p>
-                            <p>
-                                This library is sectioned off into the Fly Library and the Fish Library. 
-                                In the Fish Library, there is information on the fish itself, its best flies to be used, and where to find them.
-                                In the Fly Library, there is information on the fly itself, its main purpose, and what fish really love them. 
-                                It is important to know that this guide is meant for the Carolinas, so species around the world may act different to this information.
-                            </p>
-                        </div>
-                    </section>
-                </div>
-
-                <div id="fishlib" class="page-buttons-stack">
-                    <h2>Fish Library</h2>
-                    <section class="f-container four-img-stack">
-                        <section class="arrows-box">
-                            <p id="back-arrow">&lt</p>
-                        </section>
-                        <div id="redfish" class="page-button-block">
-                            <img src="https://fakeimg.pl/300x150" alt="image-button-guide">
-                            <h3><a href="#">Redfish</a></h3>
-                        </div>
-                        <div id="trout" class="page-button-block">
-                            <img src="https://fakeimg.pl/300x150" alt="image-button-library">
-                            <h3><a href="#">Trout</a></h3>
-                        </div>
-                        <div id="sheep" class="page-button-block">
-                            <img src="https://fakeimg.pl/300x150" alt="image-button-spotlight">
-                            <h3><a href="#">Sheepshead</a></h3>
-                        </div>
-                        <div id="rtrout" class="page-button-block">
-                            <img src="https://fakeimg.pl/300x150" alt="image-button-aboutme">
-                            <h3><a href="#">Rainbow Trout</a></h3>
-                        </div>
-                        <section class="arrows-box">
-                            <p id="back-arrow">&gt</p>
-                        </section>
-                    </section>
-                </div>
-
-                <div id="flylib" class="page-buttons-stack">
-                    <h2>Fly Library</h2>
-                    <section class="f-container four-img-stack">
-                        <section class="arrows-box">
-                            <p id="back-arrow">&lt</p>
-                        </section>
-                        <div id="dryfly" class="page-button-block">
-                            <img src="https://fakeimg.pl/300x150" alt="image-button-guide">
-                            <h3><a href="#">Dry Fly</a></h3>
-                        </div>
-                        <div id="emergerfly" class="page-button-block">
-                            <img src="https://fakeimg.pl/300x150" alt="image-button-library">
-                            <h3><a href="#">Emerger Fly</a></h3>
-                        </div>
-                        <div id="nymphfly" class="page-button-block">
-                            <img src="https://fakeimg.pl/300x150" alt="image-button-spotlight">
-                            <h3><a href="#">Nymph Fly</a></h3>
-                        </div>
-                        <div id="wetfly" class="page-button-block">
-                            <img src="https://fakeimg.pl/300x150" alt="image-button-aboutme">
-                            <h3><a href="#">Wet Fly</a></h3>
-                        </div>
-                        <section class="arrows-box">
-                            <p id="back-arrow">&gt</p>
-                        </section>
-                    </section>
-                </div>
-            </main>
-            <footer>
-                <p>&copy; Nicholas Kinard</p>
-                <script src="library-script.js"></script>
-            </footer>
+  <head>
+    <title>Project Website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="content">
+      <header>
+        <section class="header-logo">
+          <img src="https://fakeimg.pl/100x100" alt="logo" />
+          <h1>The Carolinian Flycaster</h1>
+        </section>
+        <nav id="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="guide.html">Fly Fishing Guide</a></li>
+            <li><a href="library.html">Fish and Fly Library</a></li>
+            <li><a href="spotlight.html">Fisherman's Spotlight</a></li>
+            <li><a href="about.html">About Me</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main id="main-content">
+        <!--Code Help From W3 Schools-->
+        <div id="modal-fishR" class="modal-style hide">
+          <div class="modal-header">
+            <span class="x-button">&times;</span>
+          </div>
+          <div class="modal-box-content">
+            <img src="https://fakeimg.pl/900x250" alt="logo" />
+            <h2>Redfish</h2>
+            <div class="f-container">
+              <p>
+                This cool saltwater fish finds itself in the marshes of both
+                North and South Carolina. Due to thier extended range, you can
+                gind them easy in early afternoon low tides, or schooling out
+                deep around 30-40ft water. The best time to catch these depends
+                on the time of the year as well as which marsh you are in. Some
+                good spots in this area to try first are the shallow flats of
+                Charleston and Beaufort.
+              </p>
+              <img src="https://fakeimg.pl/500x300" alt="placeholder" />
+            </div>
+            <section class="f-container">
+              <div>
+                <h2>What Flies to Use</h2>
+                <p>
+                  Since Redfish are saltwater, you are going to need to use
+                  saltwater fly patterns. These fish are going to bite
+                  completely different from the normal freshwater fish and be a
+                  little more aggressive. The best flies include the Clouser
+                  Deep Minnow, Deep Baitfish Shad, or even a Squimp.
+                </p>
+              </div>
+              <div>
+                <h2>Top Spots to Find Them</h2>
+                <p>
+                  The best places to find these fish are in saltwater regions
+                  where bank or boat fishing is accessible. It is not
+                  reccommended to go wading for thein these fish. Top areas
+                  include the flats of Charleston and Beufort as well as the
+                  bays and lagoons in the Outer Banks.
+                </p>
+              </div>
+            </section>
+          </div>
         </div>
-    </body>
+        <div id="modal-fishT" class="modal-style hide">
+          <div class="modal-header">
+            <span class="x-button">&times;</span>
+          </div>
+          <div class="modal-box-content">
+            <img src="https://fakeimg.pl/900x250" alt="logo" />
+            <h2>Trout</h2>
+            <div class="f-container">
+              <p>
+                Trout are a very sought after species of fish in the Carolinas.
+                There are many species of trout such as rainbow and brown, both
+                with their own vibrant colors. These fish are mainly found in
+                cooler waters such as streams and rivers in the mountains. To
+                find these kind of fish, you are going to want to go to higher
+                elevations such as the Appalachian mountains. Due to the
+                elevations you may experience, these fish are most enjoyable to
+                catch in the spring and fall time.
+              </p>
+              <img src="https://fakeimg.pl/500x300" alt="placeholder" />
+            </div>
+            <section class="f-container">
+              <div>
+                <h2>What Flies to Use</h2>
+                <p>
+                  Trout are wild fish that love to fish on the natural food
+                  sources in the water. In the early Spring and Fall, trout love
+                  to bite on nymphs, which are imitations of immature stages of
+                  aquatic insects. During hatch times, it is more relevant to
+                  use dry flies, which imitate more adult insects. If you want
+                  to attract larger trout, you can try to use streamers, which
+                  imitate bigger aquatic prey like baitfish and crayfish.
+                </p>
+              </div>
+              <div>
+                <h2>Top Spots to Find Them</h2>
+                <p>
+                  In the Carolinas, trout are best find in the mountain tops of
+                  Appalachia. In North Carolina, rivers like the Nantahala and
+                  Watauga are prime spots. In South Carolina, the Chattooga
+                  River in the right season can prove to be very rewarding for
+                  trout fishing.
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div id="modal-fishSH" class="modal-style hide">
+          <div class="modal-header">
+            <span class="x-button">&times;</span>
+          </div>
+          <div class="modal-box-content">
+            <img src="https://fakeimg.pl/900x250" alt="logo" />
+            <h2>Sheepshead</h2>
+            <section class="f-container">
+              <p>
+                Sheepshead fish are a common saltwater fish found piling up
+                inshore around rocks and other underwater debris. They are known
+                for their unique sharp teeth where they eat barnacles, oysters,
+                and various types of shellfish. Due to this, you sohuld opt to
+                use bait that mimics shellfish. The Sheepshead are easily
+                recognizable with their distinctive black and white patters with
+                large teeth. Further, Sheepshead are not very migratory and only
+                move offshore to spawn in the Spring time.
+              </p>
+              <img src="https://fakeimg.pl/500x300" alt="placeholder" />
+            </section>
+            <section class="f-container">
+              <div>
+                <h2>What Flies to Use</h2>
+                <p>
+                  Due to their eating habits, you are going to want to get flies
+                  that mimic shellfish and small saltwater prey. Flies like the
+                  Straight-Shooter Crab, Marsh Mohawk, and the Longhorn Crap are
+                  effective at catching this fish.
+                </p>
+              </div>
+              <div>
+                <h2>Top Spots to Find Them</h2>
+                <p>
+                  Sheepshead like to pile up around rocks and other debris. Due
+                  to this fact, it is best to go to brackish coastal waters
+                  around wharfs, shipwrecks, rocks, or other pilings.
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div id="modal-fishB" class="modal-style hide">
+          <div class="modal-header">
+            <span class="x-button">&times;</span>
+          </div>
+          <div class="modal-box-content">
+            <img src="https://fakeimg.pl/900x250" alt="logo" />
+            <h2>Bass</h2>
+            <section class="f-container">
+              <p>
+                Bass are a native species to the Carolinas and come in many
+                Varieties such as smallmouth, largemouth, and spotted. One of
+                the more abundant fish in this area, bass love to be found in
+                lakes, ponds, streams, and rivers. Bass love to eat just about
+                anything such as crayfish, frogs, insects, minnows, earthworms
+                and sometimes even other bass. Due to their eating habits and
+                predatory nature, bass can be dirty if the environment they live
+                in allows for it. Make sure to always know your local body of
+                water for any pollutants that may exist.
+              </p>
+              <img src="https://fakeimg.pl/500x300" alt="placeholder" />
+            </section>
+            <section class="f-container">
+              <div>
+                <h2>What Flies to Use</h2>
+                <p>
+                  Catching bass has always been a good past-time in the
+                  Carolinas. Since these fish eat on anything in
+                  <i>their</i> environment, you need to match your fly to the
+                  surrounding ecosystem. However, to get started, some general
+                  flies that are sure workers are Woolly Buggers, Hoppers,
+                  Poppers, and Damselfy patterns.
+                </p>
+              </div>
+              <div>
+                <h2>Top Spots to Find Them</h2>
+                <p>
+                  There is almost no spot in the Carolians that does not house
+                  some kind of bass. To be more accurate, bass do love to be in
+                  ponds, lakes, and streams and will generally pile up under
+                  rocks, twigs, and anything that provides cover. Their strategy
+                  as a predator is to hide in small holes and jump out at prey
+                  that swims by.
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+        <!--Code Help From W3 Schools-->
+
+        <div id="modal-flyD" class="modal-style hide">
+          <div class="modal-header">
+            <span class="x-button">&times;</span>
+          </div>
+          <div class="modal-box-content">
+            <img src="https://fakeimg.pl/900x250" alt="logo" />
+            <h2>Dry Fly</h2>
+            <section class="f-container">
+              <p>
+                Dry flies are a fly that imitate an adult insect. This technique
+                of fly fishing is best during seasons of insect hatches, when
+                the fish are actively feeding on adult flies. Selecting the
+                right fly pattern based on the water and ecosystem is key to
+                making them effective. To cast, simply cast the fly out and make
+                sure it sits carefully on the water, just as an adult fly would.
+              </p>
+              <img src="https://fakeimg.pl/500x300" alt="placeholder" />
+            </section>
+            <section class="f-container">
+              <div>
+                <h2>Main Purpose and Varieties</h2>
+                <p>
+                  Dry flies are best used to imitate the adult stage of an
+                  aquatic insect. Some common flies in the Carolinas include
+                  mayflies, toneflies, and caddisflies. These flies are meant to
+                  drift on top of the water to feed, and then attract fish that
+                  like to feed on the surface. Make sure to choose the right fly
+                  based on your local environment. Some variables that can
+                  attribute to choosing the right fly include the season, the
+                  color of the water, the color of the environment, and what
+                  fish might lurk.
+                </p>
+              </div>
+              <div>
+                <h2>Top Fish to Use Them For</h2>
+                <p>
+                  Top fish in the Carolinas that eat dry flies are fish like
+                  brown and rainbow trout. These fish love to surface feed on
+                  hatching insects. The best seasons are often in the Spring and
+                  Fall times. Another common fish to get are smallmouth bass,
+                  however they are not as unique.
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div id="modal-flyE" class="modal-style hide">
+          <div class="modal-header">
+            <span class="x-button">&times;</span>
+          </div>
+          <div class="modal-box-content">
+            <img src="https://fakeimg.pl/900x250" alt="logo" />
+            <h2>Emerger Fly</h2>
+            <section class="f-container">
+              <p>
+                Emerger flies are lightweight flies that mimic the hatching of
+                aquatic prey. Insects such as mayflies and caddis are usually
+                the most popular insects that these flies try to mimic. They are
+                designed to drift with the current of the water and slowly
+                submerge just below the surface. This is to imitate the action
+                of an insect hatching and leaving the steam bed to rise and fly
+                away.
+              </p>
+              <img src="https://fakeimg.pl/500x300" alt="placeholder" />
+            </section>
+            <section class="f-container">
+              <div>
+                <h2>Main Purpose and Varieties</h2>
+                <p>
+                  This fly imitates emerging insects ready to fly away into
+                  their new life. Some common varieties used by flycasters
+                  include the Blue Winged Olive, the Pale Morning Dun, and the
+                  March Brown Mayflies. However, do note that the main flies
+                  these are trying to imitate are the Caddis Flies, May Flies,
+                  and Midges and that to get best results you must try to match
+                  your environment.
+                </p>
+              </div>
+              <div>
+                <h2>Top Fish to Use Them For</h2>
+                <p>
+                  These flies work best in streams, rivers, and small waterways
+                  in freshwater. Due to this fact, bass, brook trout, rainbow
+                  trout, and brown trout are best.
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div id="modal-flyN" class="modal-style hide">
+          <div class="modal-header">
+            <span class="x-button">&times;</span>
+          </div>
+          <div class="modal-box-content">
+            <img src="https://fakeimg.pl/900x250" alt="logo" />
+            <h2>Nymph Fly</h2>
+            <section class="f-container">
+              <p>
+                Nymph flies are artificial flies that try to mimic the very
+                early stages of aquatic life. These flies are used more in the
+                depths of the water. Since these mimic the very immature stage,
+                these can include both flies and worms.
+              </p>
+              <img src="https://fakeimg.pl/500x300" alt="placeholder" />
+            </section>
+            <section class="f-container">
+              <div>
+                <h2>Main Purpose and Varieties</h2>
+                <p>
+                  Due to trying to mimic an immature insect that is eat to reach
+                  the surface, these flies are going to be submerged. Due to
+                  this, their patterns need to look authentic. In this area,
+                  some common nymphs include the Pheasant Tail Nymph, the Prince
+                  Nymph, and Copper John.
+                </p>
+              </div>
+              <div>
+                <h2>Top Fish to Use Them For</h2>
+                <p>
+                  Top fish that love nymphs are going to be found in rivers,
+                  streams, ponds, and lakes. This includes the many varieties of
+                  trout and bass!
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div id="modal-flyW" class="modal-style hide">
+          <div class="modal-header">
+            <span class="x-button">&times;</span>
+          </div>
+          <div class="modal-box-content">
+            <img src="https://fakeimg.pl/900x250" alt="logo" />
+            <h2>Wet Fly</h2>
+            <section class="f-container">
+              <p>
+                Wet flies are a very large type of bait used by flycasters.
+                These flies mimic any aquatic prey that finds itself underwater.
+                The advantage of wet flies is that they can be used in both
+                fresh and saltwaters. Also, wet flies can come in a plethora of
+                designs, shapes, and patterns.
+              </p>
+              <img src="https://fakeimg.pl/500x300" alt="placeholder" />
+            </section>
+            <section class="f-container">
+              <div>
+                <h2>Main Purpose and Varieties</h2>
+                <p>
+                  Since wet flies are desgined to be submerged, many of these
+                  flies are going to be color coordinated to their respective
+                  river bed. Some common ones include the Gold Ribbed Hare's
+                  Ear, and the Woolly Bugger.
+                </p>
+              </div>
+              <div>
+                <h2>Top Fish to Use Them For</h2>
+                <p>
+                  Top fish for these include trout, bass, carp, redfish, and
+                  grayling.
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div class="page-paragraph-content">
+          <section class="f-container">
+            <div class="page-paragraph-box">
+              <h2>The Complete Fish and Fly Library of the Carolinas</h2>
+              <p>
+                Welcome to the Fish and Fly Library, a comprehensive resource
+                giving quick information on fishes and flies to see and use in
+                the Carolinas.
+              </p>
+              <p>
+                This library is sectioned off into the Fly Library and the Fish
+                Library. In the Fish Library, there is information on the fish
+                itself, its best flies to be used, and where to find them. In
+                the Fly Library, there is information on the fly itself, its
+                main purpose, and what fish really love them. It is important to
+                know that this guide is meant for the Carolinas, so species
+                around the world may act different to this information.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <div id="fishlib" class="page-buttons-stack">
+          <h2>Fish Library</h2>
+          <section class="f-container four-img-stack">
+            <section class="arrows-box">
+              <p id="back-arrow">&lt</p>
+            </section>
+            <div id="redfish" class="page-button-block">
+              <img src="https://fakeimg.pl/300x150" alt="image-button-guide" />
+              <h3><a href="#">Redfish</a></h3>
+            </div>
+            <div id="trout" class="page-button-block">
+              <img
+                src="https://fakeimg.pl/300x150"
+                alt="image-button-library"
+              />
+              <h3><a href="#">Trout</a></h3>
+            </div>
+            <div id="sheep" class="page-button-block">
+              <img
+                src="https://fakeimg.pl/300x150"
+                alt="image-button-spotlight"
+              />
+              <h3><a href="#">Sheepshead</a></h3>
+            </div>
+            <div id="bass" class="page-button-block">
+              <img
+                src="https://fakeimg.pl/300x150"
+                alt="image-button-aboutme"
+              />
+              <h3><a href="#">Bass</a></h3>
+            </div>
+            <section class="arrows-box">
+              <p id="back-arrow">&gt</p>
+            </section>
+          </section>
+        </div>
+
+        <div id="flylib" class="page-buttons-stack">
+          <h2>Fly Library</h2>
+          <section class="f-container four-img-stack">
+            <section class="arrows-box">
+              <p id="back-arrow">&lt</p>
+            </section>
+            <div id="dryfly" class="page-button-block">
+              <img src="https://fakeimg.pl/300x150" alt="image-button-guide" />
+              <h3><a href="#">Dry Fly</a></h3>
+            </div>
+            <div id="emergerfly" class="page-button-block">
+              <img
+                src="https://fakeimg.pl/300x150"
+                alt="image-button-library"
+              />
+              <h3><a href="#">Emerger Fly</a></h3>
+            </div>
+            <div id="nymphfly" class="page-button-block">
+              <img
+                src="https://fakeimg.pl/300x150"
+                alt="image-button-spotlight"
+              />
+              <h3><a href="#">Nymph Fly</a></h3>
+            </div>
+            <div id="wetfly" class="page-button-block">
+              <img
+                src="https://fakeimg.pl/300x150"
+                alt="image-button-aboutme"
+              />
+              <h3><a href="#">Wet Fly</a></h3>
+            </div>
+            <section class="arrows-box">
+              <p id="back-arrow">&gt</p>
+            </section>
+          </section>
+        </div>
+      </main>
+      <footer>
+        <p>&copy; Nicholas Kinard</p>
+        <script src="library-script.js"></script>
+      </footer>
+    </div>
+  </body>
 </html>
