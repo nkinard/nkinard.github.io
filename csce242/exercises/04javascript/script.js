@@ -29,3 +29,18 @@ document.getElementById("btn-three").onclick = () => {
 document.getElementById("input-emotion").onkeyup = (event) => {
     document.getElementById("emotional-message").innerHTML = "You are feeling " + event.currentTarget.value;
 };
+
+//color choose
+document.getElementById("btn-choose-color").onclick = () => {
+    const color = document.getElementById("text-color").value.toLowerCase().trim();
+    let mood = "";
+    
+    if(color == "blue"){
+        mood = "grumpy";
+    } 
+    else if(color == "yellow"){
+        mood="mellow";
+    }
+
+    document.getElementById("color-message").innerHTML = `You choose ${color}. You are feeling ${mood}.`;
+};

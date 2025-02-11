@@ -5,7 +5,7 @@
   --homepage-block-color: #808080;
   --main-nav-font-color: black;
   --main-nav-fonthover-color: #add8e6;
-  --borders-color: black;
+  --borders-color: #add8e6;
   --primary-font-color: black;
   --secondary-font-color: #add8e6;
   --paragraph-alternate-box-color: #dcdcdc;
@@ -229,6 +229,30 @@ footer {
 }
 
 /* Main Navigation Home Page*/
+#hamburger-toggle {
+  cursor:pointer;
+  border: 1px solid var(--borders-color);
+  margin-top: 6px;
+  margin-bottom: 6px;
+  width: 30px;
+  border-radius: 3px;
+  background-color: var(--paragraph-alternate-box-color);
+  display: block;
+  margin-left:auto;
+}
+
+#hamburger-toggle div {
+  width:25px;
+  height: 2px;
+  background-color: var(--homepage-block-color);
+  margin: 6px 0;
+  margin-left: 2px;
+}
+
+.hide-small {
+  display: none;
+}
+
 #main-nav ul {
   padding-left: 0;
   text-align: center;
@@ -328,6 +352,14 @@ footer {
 @media (min-width: 768px) {
   .f-container {
     display: flex;
+  }
+
+  #hamburger-toggle {
+    display:none;
+  }
+
+  .hide-small {
+    display:flex;
   }
 
   #main-nav ul {
