@@ -2,6 +2,8 @@
 :root {
     --main-background-color:#CDECEF;
     --gallery-color: #FFB58A;
+    --circle-color: black;
+    --donation-percent: 0%;
 }
 
 body {
@@ -79,15 +81,41 @@ main {
     position:relative;
 }
 
-#ball {
+#ball, #circle {
     height: 30px;
     width:30px;
-    background:blue;
+    background-color:var(--circle-color);
     border-radius:50px;
-    animation-name: fun;
     position:relative;
+    
+}
+
+#ball-area {
+    position: relative;
+    height: 200px;
+}
+
+#ball {
     animation-duration: 4s;
     animation-iteration-count: infinite;
+    animation-name: fun;
+}
+
+/* Donations */
+#txt-donation {
+    max-width:40%;
+}
+
+#thermometer {
+    width:25%;
+    height:200px;
+    margin-right:10%;
+    border:2px solid var(--gallery-color);
+    background:linear-gradient(0deg, red 0% var(--donation-percent), white var(--donation-percent) 100%);
+}
+
+.error {
+    color:darkred;
 }
 
 @keyframes fun {

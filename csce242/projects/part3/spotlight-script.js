@@ -1,6 +1,11 @@
 //script by Nicholas Kinard
 //a lot of code help came from W3 Schools and
 
+//hamburger toggle switch
+document.getElementById("hamburger-toggle").onclick = () => {
+  document.getElementById("nav-list").classList.toggle("hide-small");
+};
+
 //pop ups for the spotlight
 document.getElementById("spotlightC").onclick = () => {
   const spot = document.getElementById("modal-spotlightC");
