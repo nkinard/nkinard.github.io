@@ -1,8 +1,10 @@
 document.getElementById("btn-stairs").onclick = () => {
     const stairs = document.getElementById("stair-js");
     const climb = document.getElementById("btn-climb");
+    const man = document.getElementById("climb-man");
     climb.classList.toggle("hide-section");
     stairs.classList.toggle("hide-section");
+    man.classList.toggle("hide-section");
 
     if(stairs.classList.contains("hide-section")) {
         stairs.innerHTML = "";
@@ -17,5 +19,7 @@ document.getElementById("btn-stairs").onclick = () => {
 };
 
 document.getElementById("btn-climb").onclick = () => {
-    console.log("hi");
+    const beginclimb = setInterval(() => {
+        console.log("hello");
+    }, 1000);
 };

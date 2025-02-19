@@ -28,7 +28,7 @@ header, footer {
 .stair-display {
     border-right: 5px solid var(--stair-color);
     border-left: 5px solid var(--stair-color);
-    max-width:150px;
+    max-width:100px;
     margin-top:30px;
     margin-bottom:30px;
     display:block;
@@ -36,6 +36,7 @@ header, footer {
     margin-right: auto;
     padding-top:10px;  
     padding-bottom:10px; 
+    position:relative;
 }
 
 .stair-display hr {
@@ -45,6 +46,14 @@ header, footer {
     border: 1px solid var(--stair-color);
     margin-top:40px;
     margin-bottom:40px;
+    position:relative;
+}
+
+#climb-man {
+    z-index:1;
+    position:absolute;
+    top:250px;
+    margin-left:auto;
 }
 
 .hide-section {
