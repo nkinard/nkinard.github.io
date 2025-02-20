@@ -18,8 +18,22 @@ document.getElementById("btn-stairs").onclick = () => {
     }
 };
 
+let pos = 190;
+let change = 0;
 document.getElementById("btn-climb").onclick = () => {
     const beginclimb = setInterval(() => {
-        console.log("hello");
+        const man = document.getElementById("climb-man");
+        pos+=10;
+        document.getElementById("climb-man").style.setProperty("bottom", pos+"px");
+        if(change==0) {
+            man.src="images/right.png";
+            change++;
+        } else {
+            man.src="images/left.png";
+            change--;
+        }
+        if(pos>=540) {
+            clearInterval(beginclimb);
+        } 
     }, 1000);
 };
