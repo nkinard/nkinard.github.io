@@ -21,7 +21,7 @@ document.getElementById("btn-stairs").onclick = () => {
 let pos = 190;
 let change = 0;
 document.getElementById("btn-climb").onclick = () => {
-    const beginclimb = setInterval(() => {
+    beginclimb = setInterval(() => {
         const man = document.getElementById("climb-man");
         pos+=10;
         document.getElementById("climb-man").style.setProperty("bottom", pos+"px");
@@ -32,8 +32,9 @@ document.getElementById("btn-climb").onclick = () => {
             man.src="images/left.png";
             change--;
         }
-        if(pos>=540) {
+        if(pos==540) {
             clearInterval(beginclimb);
+            pos=190; //this resets my guy
         } 
-    }, 1000);
+    }, 500);
 };
