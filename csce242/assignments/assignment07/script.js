@@ -1,12 +1,12 @@
 document.getElementById("btn-stairs").onclick = () => {
     const stairs = document.getElementById("stair-js");
     const climb = document.getElementById("btn-climb");
-    const man = document.getElementById("climb-man");
+    const block = document.getElementById("block");
+    
+    block.classList.toggle("hide-section");
     climb.classList.toggle("hide-section");
-    stairs.classList.toggle("hide-section");
-    man.classList.toggle("hide-section");
 
-    if(stairs.classList.contains("hide-section")) {
+    if(block.classList.contains("hide-section")) {
         stairs.innerHTML = "";
     } else {
         for(let i=1; i <= 10; i++) {
@@ -21,20 +21,25 @@ document.getElementById("btn-stairs").onclick = () => {
 let pos = 190;
 let change = 0;
 document.getElementById("btn-climb").onclick = () => {
+    pos=190;
+    document.getElementById("btn-climb").disabled = true;  //so that way the button cannot be spammed and the setIntervals stack 
     beginclimb = setInterval(() => {
-        const man = document.getElementById("climb-man");
-        pos+=10;
-        document.getElementById("climb-man").style.setProperty("bottom", pos+"px");
-        if(change==0) {
-            man.src="images/right.png";
-            change++;
-        } else {
-            man.src="images/left.png";
-            change--;
-        }
-        if(pos==540) {
-            clearInterval(beginclimb);
-            pos=190; //this resets my guy
+        const stick = document.getElementById("climb-stick");
+        if(pos<540) {
+            if(change==0) {
+                stick.src="images/right.png";
+                change++;
+                pos+=10;
+                stick.style.setProperty("bottom", pos+"px");
+            } else {
+                stick.src="images/left.png";
+                change--;
+                pos+=10;
+                stick.style.setProperty("bottom", pos+"px");
         } 
+        } else {
+            document.getElementById("btn-climb").disabled = false;  //stick reaches the top, button can be pressed again 
+            clearInterval(beginclimb);
+        }
     }, 500);
 };
