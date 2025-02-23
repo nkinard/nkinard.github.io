@@ -58,7 +58,7 @@ header, footer {
     width:55%;
     padding:15px;
     left:20%;
-    box-shadow: 10px 10px 15px var(--alternate-color);
+    filter: drop-shadow(15px 15px 15px var(--alternate-color));
     color:var(--body-color);
 }
 
