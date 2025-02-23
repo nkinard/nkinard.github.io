@@ -1,82 +1,82 @@
 /* Structure */
 :root {
-    --body-color: #99CC99;
-    --primary-color: #CC6633;
-    --secondary-color: #8B4513;
-    --alternate-color: #66CCCC;
-    --stair-color: black;
-    --poistion:0%;
+  --body-color: #99cc99;
+  --primary-color: #cc6633;
+  --secondary-color: #8b4513;
+  --alternate-color: #66cccc;
+  --stair-color: black;
+  --poistion: 0%;
 }
 
 body {
-    background-color: var(--body-color);
-    font-family:Arial, Helvetica, sans-serif;
+  background-color: var(--body-color);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-header, footer {
-    padding: 5px;
-    color: var(--primary-color);
+header,
+footer {
+  padding: 5px;
+  color: var(--primary-color);
 }
 
 .js-blocks h2 {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .js-blocks {
-    padding-top:10px;
-    height:550px;
+  padding-top: 10px;
+  height: 550px;
 }
 
 #content {
-    width:60%;
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main {
-    text-align: center;
+  text-align: center;
 }
 
-
 .stair-display {
-    border-right: 5px solid var(--stair-color);
-    border-left: 5px solid var(--stair-color);
-    position: relative;
-    max-width:125px;
-    min-width:125px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top:10px;
-    padding-bottom:10px;
+  border-right: 5px solid var(--stair-color);
+  border-left: 5px solid var(--stair-color);
+  position: relative;
+  max-width: 125px;
+  min-width: 125px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .stair-display hr {
-    width:100%;
-    height:5px;
-    background-color: var(--stair-color);
-    border: 1px solid var(--stair-color);
-    margin-top:40px;
-    margin-bottom:40px;
-    position:relative;
+  width: 100%;
+  height: 5px;
+  background-color: var(--stair-color);
+  border: 1px solid var(--stair-color);
+  margin-top: 40px;
+  margin-bottom: 40px;
+  position: relative;
 }
 
 #climb-stick {
-    position:relative;
-    bottom:190px;
+  position: relative;
+  bottom: 190px;
 }
 
 .hide-section {
-    display:none;
+  display: none;
 }
 
 /* Typography */
 header {
-    text-align:center;
+  text-align: center;
 }
-footer p{
-    text-align:center;
+footer p {
+  text-align: center;
 }
 .js-blocks h2 {
-    text-align: center  ;
+  text-align: center;
 }
