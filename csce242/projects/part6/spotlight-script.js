@@ -6,7 +6,6 @@ document.getElementById("hamburger-toggle").onclick = () => {
   document.getElementById("nav-list").classList.toggle("hide-small");
 };
 
-//https://nkinard.github.io/csce242/projects/part6/json/spotlight.json
 
 const getSpotlight = async () => {
   const url = "https://nkinard.github.io/csce242/projects/part6/json/spotlight.json";
@@ -40,15 +39,12 @@ const showSpotlight = async()=> {
 
     const outerimage = document.createElement("img");
     outerimage.src = spotlight.outerimage;
+    console.log(outerimage);
     a.append(outerimage);
     
     const outername = document.createElement("h3");
     outername.innerHTML = spotlight.name;
     a.append(outername);
-
-
-    
-
 
     /*
     const outerh2 = document.createElement("h2");
