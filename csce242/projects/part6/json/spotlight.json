@@ -1,6 +1,7 @@
 [
     {
-        "name": "Chattooga River",
+        "id": 1,
+        "name": "Chattooga",
         "latitude":"34.9267293",
         "longitude":"-83.3724446",
         "fishes": "Rainbow and Brown Trout",
@@ -8,7 +9,7 @@
         "watertype": "Freshwater River",
         "typeofentry": "Public",
         "Rating": 5,
-        "image": "flyfishchat.jpg",
+        "image": "images/flyfishchat.jpg",
         "seasons":"Best is Summer, Fall is acceptable" 
     },
     {
