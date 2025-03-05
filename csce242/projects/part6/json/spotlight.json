@@ -13,6 +13,16 @@
         "seasons":"Best is Summer, Fall is acceptable" 
     },
     {
-
+        "id": 2,
+        "name": "HELLOOOOO",
+        "latitude":"34.9267293",
+        "longitude":"-83.3724446",
+        "fishes": "Rainbow and Brown Trout",
+        "flies": "Dry Flies: Yellow Sally, Elk Hair Caddis, Griffith's Gnat Nymph Flies: Zebra Midge, Golden Stonefly, Rainbow Warrior",
+        "watertype": "Freshwater River",
+        "typeofentry": "Public",
+        "Rating": 5,
+        "image": "images/flyfishchat.jpg",
+        "seasons":"Best is Summer, Fall is acceptable"
     }
 ]

@@ -6,17 +6,6 @@ document.getElementById("hamburger-toggle").onclick = () => {
   document.getElementById("nav-list").classList.toggle("hide-small");
 };
 
-//pop ups for the spotlight
-document.getElementById("spotlight").onclick = () => {
-  const spot = document.querySelector()
-  console.log(spot);
-
-  const close = spot.querySelector(".x-button");
-  close.onclick = () => {
-    spot.classList.add("hide");
-  };
-};
-
 document.getElementById("spotlightS").onclick = () => {
   const spot = document.getElementById("modal-spotlightS");
   spot.classList.remove("hide");
@@ -66,8 +55,8 @@ const showSpotlight = async()=> {
   spotlightDesign.forEach(async(spotlight)=>{
     //this part fully creates all the modals for them!
     const modaldiv = document.createElement("div");
-    modaldiv.classList = "modal-style hide";
     modaldiv.id = "modal-spotlight"+spotlight.name;
+    modaldiv.classList = "modal-style hide";
     modalSpotlight.append(modaldiv);
 
     const innerdiv = document.createElement("div");
@@ -83,9 +72,7 @@ const showSpotlight = async()=> {
     modaldivtwo.classList = "modal-box-content";
     modaldiv.append(modaldivtwo);
 
-
-
   });
 };
 
-  showSpotlight();
+showSpotlight();
