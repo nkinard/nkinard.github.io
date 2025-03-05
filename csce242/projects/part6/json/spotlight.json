@@ -9,8 +9,9 @@
         "watertype": "Freshwater River",
         "typeofentry": "Public",
         "Rating": 5,
-        "image": "images/flyfishchat.jpg",
-        "seasons":"Best is Summer, Fall is acceptable" 
+        "innerimage": "images/flyfishchat.jpg",
+        "seasons":"Best is Summer, Fall is acceptable",
+        "outerimage": "images/chattooga.jpg"
     },
     {
         "id": 2,
@@ -22,7 +23,8 @@
         "watertype": "Freshwater River",
         "typeofentry": "Public",
         "Rating": 5,
-        "image": "images/flyfishchat.jpg",
-        "seasons":"Best is Summer, Fall is acceptable"
+        "innerimage": "images/flyfishchat.jpg",
+        "seasons":"Best is Summer, Fall is acceptable",
+        "outerimage":"images/chattooga.jpg"
     }
 ]
