@@ -17,6 +17,18 @@ const getSpotlight = async () => {
   }
 };
 
+const getMap = async(latitude, longitude) => {
+  try {
+      return (
+          await fetch(
+              `https://maps.google.com/maps?q=${latitude},${longitude}&t=&z=15&ie=UTF8&iwloc=&&output=embed`
+          )
+      ).url;
+  } catch (error) {
+      console.log(error);
+  }
+};
+
 const showSpotlight = async()=> {
   const spotlightDesign = await getSpotlight();
   const modalSpotlight = document.getElementById("modalSpotlight");
@@ -36,37 +48,16 @@ const showSpotlight = async()=> {
 
     const a = document.createElement("a");
     divbox.append(a);
-
+    
     const outerimage = document.createElement("img");
-    outerimage.src = spotlight.outerimage;
+    outerimage.src = `images/${spotlight.outerimage}`;
     console.log(outerimage);
-    a.append(outerimage);
+    a.append(outerimage); 
     
     const outername = document.createElement("h3");
-    outername.innerHTML = spotlight.name;
+    outername.innerHTML = `${spotlight.name} River`;
     a.append(outername);
-
-    /*
-    const outerh2 = document.createElement("h2");
-    outerh2.innerHTML = `${spotlight.name} River`;
-    pagediv.append(outerh2);
-
-    const spotlightitem = document.createElement("div");
-    spotlightitem.id = `${spotlight.name}`;
-    spotlightitem.classList = "page-button-block";
-    spotlightsection.append(spotlightitem);
-
-    const spotlightinfo = document.createElement("a");
-    spotlightsection.append(spotlightinfo);
-
-    const spotlightoutername = document.createElement("h3");
-    const spotlightouterimage = document.createElement("img");
-    spotlightouterimage.src = spotlight.outerimage;
-    spotlightoutername.innerHTML = spotlight.name;
-    spotlightsection.append(spotlightouterimage);
-    spotlightsection.append(spotlightoutername);
-    */
-
+    
     //this part fully creates all the modals for them!
     const modaldiv = document.createElement("div");
     modaldiv.id = "modal-spotlight"+spotlight.name;
@@ -87,24 +78,74 @@ const showSpotlight = async()=> {
     modaldiv.append(modaldivtwo);
 
     //create the header image and name
-    const image = document.createElement("img");
-    image.src = spotlight.image;
-    modaldivtwo.append(image);
+    const innerimage = document.createElement("img");
+    innerimage.src = `images/${spotlight.innerimage}`;
+    modaldivtwo.append(innerimage);
     const name = document.createElement("h2");
     name.innerHTML = spotlight.name;
-    modaldivtwo.append(name);
+    modaldivtwo.append(name); 
 
+    //create the section for summary
+    const summary = document.createElement("section");
+    const summaryp = document.createElement("p");
+    modaldivtwo.append(summary)
+    summaryp.innerHTML = spotlight.summary;
+    modaldivtwo.append(summaryp)
+
+    //info section
+    const infosection = document.createElement("section");
+    infosection.classList = "f-container";
+    modaldivtwo.append(infosection);
+
+    const firsth2 = document.createElement("h2");
+    firsth2.innerHTML = "Types of Flies and Fishes";
+    infosection.append(firsth2);
+
+    const flyp = document.createElement("p");
+    flyp.innerHTML = `What Type of Flies: ${spotlight.flies}`;
+    infosection.append(flyp);
+
+    const fishp = document.createElement("p");
+    fishp.innerHTML = `What Type of Fishes: ${spotlight.fishes}`;
+    infosection.append(fishp);
+
+    const infoh2 = document.createElement("h2");
+    infoh2.innerHTML = "Useful Information";
+    infosection.append(infoh2);
+
+    const bodyofwater = document.createElement("p");
+    bodyofwater.innerHTML = `What Body of Water: ${spotlight.watertype}`;
+    infosection.append(bodyofwater);
+
+    const access = document.createElement("p");
+    access.innerHTML = `Public or Private Access: ${spotlight.typeofentry}`;
+    infosection.append(access);
+
+    const season = document.createElement("p");
+    season.innerHTML = `Best Season: ${spotlight.seasons}`;
+    infosection.append(season);
+
+    const rating = document.createElement("h3");
+    rating.innerHTML = `Final Rating: ${spotlight.rating}/5`;
+    infosection.append(rating); 
+
+    const iframe = document.createElement("iframe");
+    iframe.src = await getMap(spotlight.latitude, spotlight.longitude);
+    infosection.append(iframe);
   });
+
+  document.getElementById("sboxChattooga").onclick = () => {
+    const spot = document.getElementById("modal-spotlightChattooga");
+    spot.classList.remove("hide");
+  
+    const close = spot.querySelector(".x-button");
+    close.onclick = () => {
+      spot.classList.add("hide");
+    }; 
+  };
+  
 };
 
 showSpotlight();
-/*
-document.getElementById("spotlightC").onclick = () => {
-  const spot = document.getElementById("modal-spotlightChattooga");
-  spot.classList.remove("hide");
 
-  const close = spot.querySelector(".x-button");
-  close.onclick = () => {
-    spot.classList.add("hide");
-  }; 
-} */
+
