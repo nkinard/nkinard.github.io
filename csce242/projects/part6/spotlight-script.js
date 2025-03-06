@@ -59,7 +59,7 @@ const showSpotlight = async () => {
     divbox.append(a);
 
     const outerimage = document.createElement("img");
-    outerimage.src = `images/${spotlight.outerimage}`;
+    outerimage.src = `json/images/${spotlight.outerimage}`;
     console.log(outerimage);
     a.append(outerimage);
 
@@ -88,7 +88,7 @@ const showSpotlight = async () => {
 
     //create the header image and name
     const innerimage = document.createElement("img");
-    innerimage.src = `images/${spotlight.innerimage}`;
+    innerimage.src = `json/images/${spotlight.innerimage}`;
     modaldivtwo.append(innerimage);
     const innername = document.createElement("h2");
     innername.innerHTML = `${spotlight.name} River Spotlight`;
