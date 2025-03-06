@@ -81,53 +81,55 @@ const showSpotlight = async()=> {
     const innerimage = document.createElement("img");
     innerimage.src = `images/${spotlight.innerimage}`;
     modaldivtwo.append(innerimage);
-    const name = document.createElement("h2");
-    name.innerHTML = spotlight.name;
-    modaldivtwo.append(name); 
+    const innername = document.createElement("h2");
+    innername.innerHTML = `${spotlight.name} River Spotlight`;
+    modaldivtwo.append(innername); 
 
     //create the section for summary
     const summary = document.createElement("section");
     const summaryp = document.createElement("p");
     modaldivtwo.append(summary)
     summaryp.innerHTML = spotlight.summary;
-    modaldivtwo.append(summaryp)
+    summary.append(summaryp)
 
     //info section
     const infosection = document.createElement("section");
     infosection.classList = "f-container";
     modaldivtwo.append(infosection);
+    const infodiv = document.createElement("div");
+    infosection.append(infodiv);
 
     const firsth2 = document.createElement("h2");
     firsth2.innerHTML = "Types of Flies and Fishes";
-    infosection.append(firsth2);
+    infodiv.append(firsth2);
 
     const flyp = document.createElement("p");
     flyp.innerHTML = `What Type of Flies: ${spotlight.flies}`;
-    infosection.append(flyp);
+    infodiv.append(flyp);
 
     const fishp = document.createElement("p");
     fishp.innerHTML = `What Type of Fishes: ${spotlight.fishes}`;
-    infosection.append(fishp);
+    infodiv.append(fishp);
 
     const infoh2 = document.createElement("h2");
     infoh2.innerHTML = "Useful Information";
-    infosection.append(infoh2);
+    infodiv.append(infoh2);
 
     const bodyofwater = document.createElement("p");
     bodyofwater.innerHTML = `What Body of Water: ${spotlight.watertype}`;
-    infosection.append(bodyofwater);
+    infodiv.append(bodyofwater);
 
     const access = document.createElement("p");
     access.innerHTML = `Public or Private Access: ${spotlight.typeofentry}`;
-    infosection.append(access);
+    infodiv.append(access);
 
     const season = document.createElement("p");
     season.innerHTML = `Best Season: ${spotlight.seasons}`;
-    infosection.append(season);
+    infodiv.append(season);
 
     const rating = document.createElement("h3");
     rating.innerHTML = `Final Rating: ${spotlight.rating}/5`;
-    infosection.append(rating); 
+    infodiv.append(rating); 
 
     const iframe = document.createElement("iframe");
     iframe.src = await getMap(spotlight.latitude, spotlight.longitude);
@@ -136,6 +138,15 @@ const showSpotlight = async()=> {
 
   document.getElementById("sboxChattooga").onclick = () => {
     const spot = document.getElementById("modal-spotlightChattooga");
+    spot.classList.remove("hide");
+  
+    const close = spot.querySelector(".x-button");
+    close.onclick = () => {
+      spot.classList.add("hide");
+    }; 
+  };
+  document.getElementById("sboxSaluda").onclick = () => {
+    const spot = document.getElementById("modal-spotlightSaluda");
     spot.classList.remove("hide");
   
     const close = spot.querySelector(".x-button");
