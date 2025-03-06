@@ -29,22 +29,32 @@ const getMap = async(latitude, longitude) => {
   }
 };
 
+let currentSection;
+let divCount = 0;
+
 const showSpotlight = async()=> {
   const spotlightDesign = await getSpotlight();
   const modalSpotlight = document.getElementById("modalSpotlight");
   const pagediv = document.getElementById("spotlightlib");
-  const section = document.createElement("section");
-  section.classList = "f-container four-img-stack";
-  pagediv.append(section);
 
   spotlightDesign.forEach(async(spotlight)=>{
     console.log(spotlight);
+    console.log(divCount);
+
+    if(divCount%4===0){
+      currentSection = document.createElement("section");
+      currentSection.classList = "f-container four-img-stack";
+      pagediv.append(currentSection)
+    }
+
+    divCount++;
     
     //this part will create the main clickable buttons based on the json file
     const divbox = document.createElement("div");
-    divbox.id = "sbox"+spotlight.name;
+    divbox.id = "sbox"+spotlight.id;
     divbox.classList = "page-button-block";
-    section.append(divbox);
+    currentSection.append(divbox);
+    
 
     const a = document.createElement("a");
     divbox.append(a);
@@ -60,7 +70,7 @@ const showSpotlight = async()=> {
     
     //this part fully creates all the modals for them!
     const modaldiv = document.createElement("div");
-    modaldiv.id = "modal-spotlight"+spotlight.name;
+    modaldiv.id = "modal-spotlight"+spotlight.id;
     modaldiv.classList = "modal-style hide";
     modalSpotlight.append(modaldiv);
 
@@ -133,11 +143,12 @@ const showSpotlight = async()=> {
 
     const iframe = document.createElement("iframe");
     iframe.src = await getMap(spotlight.latitude, spotlight.longitude);
-    infosection.append(iframe);
+    infosection.append(iframe); 
+
   });
 
-  document.getElementById("sboxChattooga").onclick = () => {
-    const spot = document.getElementById("modal-spotlightChattooga");
+  document.getElementById("sbox1").onclick = () => {
+    const spot = document.getElementById("modal-spotlight1");
     spot.classList.remove("hide");
   
     const close = spot.querySelector(".x-button");
@@ -145,8 +156,62 @@ const showSpotlight = async()=> {
       spot.classList.add("hide");
     }; 
   };
-  document.getElementById("sboxSaluda").onclick = () => {
-    const spot = document.getElementById("modal-spotlightSaluda");
+  document.getElementById("sbox2").onclick = () => {
+    const spot = document.getElementById("modal-spotlight2");
+    spot.classList.remove("hide");
+  
+    const close = spot.querySelector(".x-button");
+    close.onclick = () => {
+      spot.classList.add("hide");
+    }; 
+  };
+  document.getElementById("sbox3").onclick = () => {
+    const spot = document.getElementById("modal-spotlight3");
+    spot.classList.remove("hide");
+  
+    const close = spot.querySelector(".x-button");
+    close.onclick = () => {
+      spot.classList.add("hide");
+    }; 
+  };
+  document.getElementById("sbox4").onclick = () => {
+    const spot = document.getElementById("modal-spotlight4");
+    spot.classList.remove("hide");
+  
+    const close = spot.querySelector(".x-button");
+    close.onclick = () => {
+      spot.classList.add("hide");
+    }; 
+  };
+  document.getElementById("sbox5").onclick = () => {
+    const spot = document.getElementById("modal-spotlight5");
+    spot.classList.remove("hide");
+  
+    const close = spot.querySelector(".x-button");
+    close.onclick = () => {
+      spot.classList.add("hide");
+    }; 
+  };
+  document.getElementById("sbox6").onclick = () => {
+    const spot = document.getElementById("modal-spotlight6");
+    spot.classList.remove("hide");
+  
+    const close = spot.querySelector(".x-button");
+    close.onclick = () => {
+      spot.classList.add("hide");
+    }; 
+  };
+  document.getElementById("sbox7").onclick = () => {
+    const spot = document.getElementById("modal-spotlight7");
+    spot.classList.remove("hide");
+  
+    const close = spot.querySelector(".x-button");
+    close.onclick = () => {
+      spot.classList.add("hide");
+    }; 
+  };
+  document.getElementById("sbox8").onclick = () => {
+    const spot = document.getElementById("modal-spotlight8");
     spot.classList.remove("hide");
   
     const close = spot.querySelector(".x-button");
