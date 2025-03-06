@@ -9,7 +9,7 @@
   --borders-color: #91CDF2;
   --primary-font-color: #032340;
   --secondary-font-color: #91CDF2;
-  --paragraph-alternate-box-color: #91CDF2;
+  --paragraph-alternate-box-color: #c0cdd8;
 }
 
 header {
@@ -115,8 +115,9 @@ footer {
   text-align: right;
 }
 
-.page-paragraph-content:nth-child(even) {
+.paragraph-color {
   background-color: var(--paragraph-alternate-box-color);
+  border: 1px solid var(--main-background-color);
 }
 
 .page-paragraph-content {
