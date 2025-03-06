@@ -6,9 +6,9 @@ document.getElementById("hamburger-toggle").onclick = () => {
   document.getElementById("nav-list").classList.toggle("hide-small");
 };
 
-
 const getSpotlight = async () => {
-  const url = "https://nkinard.github.io/csce242/projects/part6/json/spotlight.json";
+  const url =
+    "https://nkinard.github.io/csce242/projects/part6/json/spotlight.json";
   try {
     const response = await fetch(url);
     return response.json();
@@ -17,60 +17,59 @@ const getSpotlight = async () => {
   }
 };
 
-const getMap = async(latitude, longitude) => {
+const getMap = async (latitude, longitude) => {
   try {
-      return (
-          await fetch(
-              `https://maps.google.com/maps?q=${latitude},${longitude}&t=&z=15&ie=UTF8&iwloc=&&output=embed`
-          )
-      ).url;
+    return (
+      await fetch(
+        `https://maps.google.com/maps?q=${latitude},${longitude}&t=&z=15&ie=UTF8&iwloc=&&output=embed`
+      )
+    ).url;
   } catch (error) {
-      console.log(error);
+    console.log(error);
   }
 };
 
 let currentSection;
 let divCount = 0;
 
-const showSpotlight = async()=> {
+const showSpotlight = async () => {
   const spotlightDesign = await getSpotlight();
   const modalSpotlight = document.getElementById("modalSpotlight");
   const pagediv = document.getElementById("spotlightlib");
 
-  spotlightDesign.forEach(async(spotlight)=>{
+  spotlightDesign.forEach(async (spotlight) => {
     console.log(spotlight);
     console.log(divCount);
 
-    if(divCount%4===0){
+    if (divCount % 4 === 0) {
       currentSection = document.createElement("section");
       currentSection.classList = "f-container four-img-stack";
-      pagediv.append(currentSection)
+      pagediv.append(currentSection);
     }
 
     divCount++;
-    
+
     //this part will create the main clickable buttons based on the json file
     const divbox = document.createElement("div");
-    divbox.id = "sbox"+spotlight.id;
+    divbox.id = "sbox" + spotlight.id;
     divbox.classList = "page-button-block";
     currentSection.append(divbox);
-    
 
     const a = document.createElement("a");
     divbox.append(a);
-    
+
     const outerimage = document.createElement("img");
     outerimage.src = `images/${spotlight.outerimage}`;
     console.log(outerimage);
-    a.append(outerimage); 
-    
+    a.append(outerimage);
+
     const outername = document.createElement("h3");
     outername.innerHTML = `${spotlight.name} River`;
     a.append(outername);
-    
+
     //this part fully creates all the modals for them!
     const modaldiv = document.createElement("div");
-    modaldiv.id = "modal-spotlight"+spotlight.id;
+    modaldiv.id = "modal-spotlight" + spotlight.id;
     modaldiv.classList = "modal-style hide";
     modalSpotlight.append(modaldiv);
 
@@ -93,14 +92,14 @@ const showSpotlight = async()=> {
     modaldivtwo.append(innerimage);
     const innername = document.createElement("h2");
     innername.innerHTML = `${spotlight.name} River Spotlight`;
-    modaldivtwo.append(innername); 
+    modaldivtwo.append(innername);
 
     //create the section for summary
     const summary = document.createElement("section");
     const summaryp = document.createElement("p");
-    modaldivtwo.append(summary)
+    modaldivtwo.append(summary);
     summaryp.innerHTML = spotlight.summary;
-    summary.append(summaryp)
+    summary.append(summaryp);
 
     //info section
     const infosection = document.createElement("section");
@@ -139,89 +138,85 @@ const showSpotlight = async()=> {
 
     const rating = document.createElement("h3");
     rating.innerHTML = `Final Rating: ${spotlight.rating}/5`;
-    infodiv.append(rating); 
+    infodiv.append(rating);
 
     const iframe = document.createElement("iframe");
     iframe.src = await getMap(spotlight.latitude, spotlight.longitude);
-    infosection.append(iframe); 
-
+    infosection.append(iframe);
   });
 
   document.getElementById("sbox1").onclick = () => {
     const spot = document.getElementById("modal-spotlight1");
     spot.classList.remove("hide");
-  
+
     const close = spot.querySelector(".x-button");
     close.onclick = () => {
       spot.classList.add("hide");
-    }; 
+    };
   };
   document.getElementById("sbox2").onclick = () => {
     const spot = document.getElementById("modal-spotlight2");
     spot.classList.remove("hide");
-  
+
     const close = spot.querySelector(".x-button");
     close.onclick = () => {
       spot.classList.add("hide");
-    }; 
+    };
   };
   document.getElementById("sbox3").onclick = () => {
     const spot = document.getElementById("modal-spotlight3");
     spot.classList.remove("hide");
-  
+
     const close = spot.querySelector(".x-button");
     close.onclick = () => {
       spot.classList.add("hide");
-    }; 
+    };
   };
   document.getElementById("sbox4").onclick = () => {
     const spot = document.getElementById("modal-spotlight4");
     spot.classList.remove("hide");
-  
+
     const close = spot.querySelector(".x-button");
     close.onclick = () => {
       spot.classList.add("hide");
-    }; 
+    };
   };
   document.getElementById("sbox5").onclick = () => {
     const spot = document.getElementById("modal-spotlight5");
     spot.classList.remove("hide");
-  
+
     const close = spot.querySelector(".x-button");
     close.onclick = () => {
       spot.classList.add("hide");
-    }; 
+    };
   };
   document.getElementById("sbox6").onclick = () => {
     const spot = document.getElementById("modal-spotlight6");
     spot.classList.remove("hide");
-  
+
     const close = spot.querySelector(".x-button");
     close.onclick = () => {
       spot.classList.add("hide");
-    }; 
+    };
   };
   document.getElementById("sbox7").onclick = () => {
     const spot = document.getElementById("modal-spotlight7");
     spot.classList.remove("hide");
-  
+
     const close = spot.querySelector(".x-button");
     close.onclick = () => {
       spot.classList.add("hide");
-    }; 
+    };
   };
   document.getElementById("sbox8").onclick = () => {
     const spot = document.getElementById("modal-spotlight8");
     spot.classList.remove("hide");
-  
+
     const close = spot.querySelector(".x-button");
     close.onclick = () => {
       spot.classList.add("hide");
-    }; 
+    };
   };
-  
 };
 
 showSpotlight();
-
-
