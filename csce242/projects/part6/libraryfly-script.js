@@ -20,7 +20,7 @@ const url = "https://nkinard.github.io/csce242/projects/part6/json/flylib.json";
 //this takes in my json and parses
 const showFly = async() => {
     const flyDesign = await getFly();
-    const modalFly = document.getElementById("gallery");
+    const modalFly = document.getElementById("galleryfly");
     const mainContent = document.getElementById("main-content");
 
     //create modal block
@@ -82,7 +82,7 @@ const showFly = async() => {
     //create design for all fly
     flyDesign.forEach(async(fly) => {
         const galleryitem = document.createElement("div");
-        galleryitem.id = "gallery-item"
+        galleryitem.id = "galleryfly-item"
         modalFly.append(galleryitem);
 
         const a = document.createElement("a");

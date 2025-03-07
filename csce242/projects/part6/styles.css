@@ -59,7 +59,7 @@ footer {
   border: 2px solid var(--borders-color);
 }
 
-#gallery-item {
+#gallery-item, #galleryfish-item, #galleryfly-item {
   text-align: center;
   background-color: var(--homepage-block-color);
   border: 2px solid var(--borders-color);
@@ -83,18 +83,21 @@ footer {
   cursor: pointer;
 }
 
-.page-button-block img, #gallery-item img {
+.page-button-block img, #gallery-item img, 
+#galleryfish-item img, #galleryfly-item img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   width: 100%;
 }
 
-.page-button-block a, #gallery-item a {
+.page-button-block a, #gallery-item a, 
+#galleryfish-item a, #galleryfly-item a {
   text-decoration: none;
   color: var(--primary-font-color);
 }
 
-.page-button-block a:hover, #gallery-item a:hover {
+.page-button-block a:hover, #gallery-item a:hover, 
+#galleryfish-item a:hover, #galleryfly-item a:hover {
   color: var(--button-block-hover);
 }
 
@@ -206,12 +209,12 @@ footer {
 }
 
 /* Spotlight Page */
-#spotlightlib, #gallery {
+#spotlightlib, #gallery, #galleryfly, #galleryfish {
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-#spotlightlib h2, #gallery h2 {
+#spotlightlib h2, #gallery h2, #galleryfish h2, #galleryfly h2 {
   color: var(--primary-font-color);
 }
 
@@ -422,21 +425,21 @@ footer {
     display:flex;
   }
 
-  #gallery {
+  #galleryfish, #galleryfly, #gallery {
     display:flex;
     flex-wrap:wrap;
     gap:10px;
     justify-content: space-between;
   }
 
-  #gallery-item {
+  #gallery-item, #galleryfish-item, #galleryfly-item {
     width: calc(24% - 10px);
     height: 275px;
     overflow: hidden;
     cursor:pointer;
   }
 
-  #gallery-item img {
+  #gallery-item img, #galleryfish-item img, #galleryfly-item img {
     height: 200px;
   }
 

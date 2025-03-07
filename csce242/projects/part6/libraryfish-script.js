@@ -20,7 +20,7 @@ const url = "https://nkinard.github.io/csce242/projects/part6/json/fishlib.json"
 //this takes in my json and parses
 const showFish = async() => {
     const fishDesign = await getFish();
-    const modalFish = document.getElementById("gallery");
+    const modalFish = document.getElementById("galleryfish");
     const mainContent = document.getElementById("main-content");
 
     //create modal block
@@ -84,7 +84,7 @@ const showFish = async() => {
         console.log(fish.name);
 
         const galleryitem = document.createElement("div");
-        galleryitem.id = "gallery-item"
+        galleryitem.id = "galleryfish-item"
         modalFish.append(galleryitem);
 
         const a = document.createElement("a");
