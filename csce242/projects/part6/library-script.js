@@ -155,4 +155,4 @@ const fishArray = () => {
   for (let i in fish) {
     fishList.append(fish[i].item);
   }
-} */
+}  */
