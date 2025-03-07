@@ -81,7 +81,6 @@ const showFish = async() => {
 
     //create design for all fish
     fishDesign.forEach(async(fish) => {
-        console.log(fish.name);
 
         const galleryitem = document.createElement("div");
         galleryitem.id = "galleryfish-item"
@@ -92,7 +91,6 @@ const showFish = async() => {
 
         const outerimage = document.createElement("img");
         outerimage.src = `json/images/${fish.outerimage}`;
-        console.log(outerimage);
         a.append(outerimage);
 
         const outername = document.createElement("h3");
@@ -101,7 +99,6 @@ const showFish = async() => {
 
         //open and fill modal block
         galleryitem.onclick = async() => {
-            console.log(fish.name);
             //open and close modal
             modaldiv.classList.remove("hide");
            

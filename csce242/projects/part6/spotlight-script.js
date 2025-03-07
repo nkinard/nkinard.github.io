@@ -105,7 +105,6 @@ const showSpotlight = async() => {
 
     //create design for all spotlight
     spotlightDesign.forEach(async(spotlight) => {
-        console.log(spotlight.name);
 
         const galleryitem = document.createElement("div");
         galleryitem.id = "gallery-item"
@@ -116,7 +115,6 @@ const showSpotlight = async() => {
 
         const outerimage = document.createElement("img");
         outerimage.src = `json/images/${spotlight.outerimage}`;
-        console.log(outerimage);
         a.append(outerimage);
 
         const outername = document.createElement("h3");
@@ -125,7 +123,6 @@ const showSpotlight = async() => {
 
         //open and fill modal block
         galleryitem.onclick = async() => {
-            console.log(spotlight.name);
             //open and close modal
             modaldiv.classList.remove("hide");
            

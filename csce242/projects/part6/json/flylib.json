@@ -8,5 +8,35 @@
         "innerbottomimage": "dryflyspec.jpg",
         "purpose": "Dry flies are best used to imitate the adult stage of an aquatic insect. Some common flies in the Carolinas include mayflies, toneflies, and caddisflies. These flies are meant to drift on top of the water to feed, and then attract fish that like to feed on the surface. Make sure to choose the right fly based on your local environment. Some variables that can attribute to choosing the right fly include the season, the color of the water, the color of the environment, and what fish might lurk.",
         "topfish": "Top fish in the Carolinas that eat dry flies are fish like brown and rainbow trout. These fish love to surface feed on hatching insects. The best seasons are often in the Spring and Fall times. Another common fish to get are smallmouth bass, however they are not as unique."
+    },
+    {
+        "id": 2,
+        "name": "Emerger Fly",
+        "summary": "Emerger flies are lightweight flies that mimic the hatching of aquatic prey. Insects such as mayflies and caddis are usually the most popular insects that these flies try to mimic. They are designed to drift with the current of the water and slowly submerge just below the surface. This is to imitate the action of an insect hatching and leaving the steam bed to rise and fly away.",
+        "outerimage": "emerger.jpg",
+        "innertopimage": "emergerflytype.jpg",
+        "innerbottomimage": "emergerspec.jpg",
+        "purpose": "This fly imitates emerging insects ready to fly away into their new life. Some common varieties used by flycasters include the Blue Winged Olive, the Pale Morning Dun, and the March Brown Mayflies. However, do note that the main flies these are trying to imitate are the Caddis Flies, May Flies, and Midges and that to get best results you must try to match your environment.",
+        "topfish": "These flies work best in streams, rivers, and small waterways in freshwater. Due to this fact, bass, brook trout, rainbow trout, and brown trout are best."
+    },
+    {
+        "id": 3,
+        "name": "Nymph Fly",
+        "summary": "Nymph flies are artificial flies that try to mimic the very early stages of aquatic life. These flies are used more in the depths of the water. Since these mimic the very immature stage, these can include both flies and worms.",
+        "outerimage": "nymph.jpg",
+        "innertopimage": "nymphtypes.jpg",
+        "innerbottomimage": "nymphflyspec.jpg",
+        "purpose": "Due to trying to mimic an immature insect that is eat to reach the surface, these flies are going to be submerged. Due to this, their patterns need to look authentic. In this area, some common nymphs include the Pheasant Tail Nymph, the Prince Nymph, and Copper John.",
+        "topfish": "Top fish that love nymphs are going to be found in rivers, streams, ponds, and lakes. This includes the many varieties of trout and bass!"
+    },
+    {
+        "id": 4,
+        "name": "Wet Fly",
+        "summary": "Wet flies are a very large type of bait used by flycasters. These flies mimic any aquatic prey that finds itself underwater. The advantage of wet flies is that they can be used in both fresh and saltwaters. Also, wet flies can come in a plethora of designs, shapes, and patterns.",
+        "outerimage": "wefly.jpg",
+        "innertopimage": "wettypes.jpg",
+        "innerbottomimage": "wetflyspec.jpg",
+        "purpose": "Since wet flies are desgined to be submerged, many of these flies are going to be color coordinated to their respective river bed. Some common ones include the Gold Ribbed Hare's Ear, and the Woolly Bugger.",
+        "topfish": "Top fish for these include trout, bass, carp, redfish, and grayling."
     }
 ]

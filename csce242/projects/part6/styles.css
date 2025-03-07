@@ -234,6 +234,7 @@ footer {
   padding-bottom: 0;
   margin-left:5px;
   margin-right:5px;
+  padding:0;
   border:2px solid var(--secondary-background-color);
 }
 

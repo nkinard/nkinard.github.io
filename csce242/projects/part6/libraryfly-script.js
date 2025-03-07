@@ -90,7 +90,6 @@ const showFly = async() => {
 
         const outerimage = document.createElement("img");
         outerimage.src = `json/images/${fly.outerimage}`;
-        console.log(outerimage);
         a.append(outerimage);
 
         const outername = document.createElement("h3");
