@@ -102,13 +102,10 @@ footer {
 .page-paragraph-box,
 .page-list-box,
 .page-paragraph-box-alternate {
-  margin-right: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
 }
 
-.page-paragraph-box {
-  margin-left: 10px;
-}
+
 
 .color {
   background-color: var(--paragraph-alternate-box-color);

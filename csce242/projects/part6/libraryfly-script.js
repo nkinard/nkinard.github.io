@@ -7,8 +7,8 @@ document.getElementById("hamburger-toggle").onclick = () => {
   };
   
 //call in my json file
-const getFish = async () => {
-const url = "https://nkinard.github.io/csce242/projects/part6/json/fishlib.json";
+const getFly = async () => {
+const url = "https://nkinard.github.io/csce242/projects/part6/json/flylib.json";
     try {
         const response = await fetch(url);
         return response.json();
@@ -18,15 +18,15 @@ const url = "https://nkinard.github.io/csce242/projects/part6/json/fishlib.json"
 };
 
 //this takes in my json and parses
-const showFish = async() => {
-    const fishDesign = await getFish();
-    const modalFish = document.getElementById("gallery");
+const showFly = async() => {
+    const flyDesign = await getFly();
+    const modalFly = document.getElementById("gallery");
     const mainContent = document.getElementById("main-content");
 
     //create modal block
     const modaldiv = document.createElement("div");
     mainContent.append(modaldiv);
-    modaldiv.id = "modal-fish";
+    modaldiv.id = "modal-fly";
     modaldiv.classList = "modal-style hide";
     
     const innerdiv = document.createElement("div");
@@ -66,49 +66,62 @@ const showFish = async() => {
     infosection.append(infodiv);
 
     const firsth2 = document.createElement("h2");
-    firsth2.innerHTML = "What Flies to Use";
+    firsth2.innerHTML = "Main Purpose and Varieties";
     infodiv.append(firsth2);
 
-    const flyp = document.createElement("p");
-    infodiv.append(flyp);
+    const mainpurpose = document.createElement("p");
+    infodiv.append(mainpurpose);
 
     const infoh2 = document.createElement("h2");
-    infoh2.innerHTML = "Top Spots to Find Them";
+    infoh2.innerHTML = "Top Fish to Use Them For";
     infodiv.append(infoh2);
 
-    const spotp = document.createElement("p");
-    infodiv.append(spotp);
+    const topf = document.createElement("p");
+    infodiv.append(topf);
 
-    //create design for all spotlight
-    fishDesign.forEach(async(fish) => {
-        console.log(fish.name);
-
+    //create design for all fly
+    flyDesign.forEach(async(fly) => {
         const galleryitem = document.createElement("div");
         galleryitem.id = "gallery-item"
-        modalFish.append(galleryitem);
+        modalFly.append(galleryitem);
 
         const a = document.createElement("a");
         galleryitem.append(a);
 
         const outerimage = document.createElement("img");
-        outerimage.src = `json/images/${fish.outerimage}`;
+        outerimage.src = `json/images/${fly.outerimage}`;
         console.log(outerimage);
         a.append(outerimage);
 
         const outername = document.createElement("h3");
-        outername.innerHTML = `${fish.name}`;
+        outername.innerHTML = `${fly.name}`;
         a.append(outername);
 
         //open and fill modal block
         galleryitem.onclick = async() => {
-            console.log(fish.name);
             //open and close modal
             modaldiv.classList.remove("hide");
            
             //fill unique modal items
+            innerimage.src = `json/images/${fly.innertopimage}`;
+            innername.innerHTML = `${fly.name}`;
+            summaryp.innerHTML = fly.summary;
+            bottomimage.src = `json/images/${fly.innerbottomimage}`;
+            mainpurpose.innerHTML = fly.purpose;
+            topf.innerHTML = fly.topfish;
         };
 
+        //close modal and reset all items!
+        button.onclick = () => {
+            modaldiv.classList.add("hide");
+            innerimage.src = " ";
+            innername.innerHTML = " ";
+            summaryp.innerHTML = " ";
+            mainpurpose.innerHTML = " ";
+            topf.innerHTML = " ";
+            bottomimage.src = " ";
+        };
     });
 };
-
-showFish();
+//call on showFish to json parse
+showFly();
