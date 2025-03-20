@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <title>Tab Name</title>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <img id="main-logo" src="https://picsum.photos/50">
+                <h1>Main Title</h1>
+                <nav id="main-nav">
+                    <div id="toggle-nav">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <ul id="nav-items" class="columns hide-small">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="js-intro.html">JS Intro</a></li>
+                        <li><a href="loops.html">Loops</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                        <li><a href="jsons.html">json Parsing</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <nav id="sub-nav">
+                    <ul class="columns">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                        <li><a href="#">Link 4</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="columns">
+                <section class="one">
+                    <form method="POST" id="form">
+
+                        <input type="hidden" name="access_key" value="32c21653-ffe5-472d-9d74-bc05ecbffe6b">
+                    
+                        <input type="text" name="name" required>
+                        <input type="email" name="email" required>
+                        <textarea name="message" required></textarea>
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    
+                        <button type="submit">Submit Form</button>
+                    
+                        <div id="result"></div>
+                    
+                    </form>
+                </section>
+                <section class="one">
+                    <h3>Our Location</h3>
+                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d417.846088968105!2d-81.03094399848185!3d33.99240173672244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8a4d455555555%3A0x50c181a3ce26e9a9!2sIBM%20Center%20For%20Innovation%20UofSC!5e0!3m2!1sen!2sus!4v1742476642348!5m2!1sen!2sus"; allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+            </main>
+        </div>
+        <script src="js/contact-us.js"></script>
+    </body>
+</html>
