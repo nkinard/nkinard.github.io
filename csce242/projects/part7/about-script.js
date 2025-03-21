@@ -4,6 +4,7 @@ document.getElementById("hamburger-toggle").onclick = () => {
   };
 
 //form code
+//source from https://web3forms.com/
 const form = document.getElementById('form');
 const result = document.getElementById('result');
 
@@ -12,6 +13,7 @@ form.addEventListener('submit', function(e) {
   const formData = new FormData(form);
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
+  result.style.display = "block"; //add this in, allowed for multiple entries on one refresh
   result.innerHTML = "Please wait..."
 
     fetch('https://api.web3forms.com/submit', {
@@ -38,7 +40,7 @@ form.addEventListener('submit', function(e) {
         .then(function() {
             form.reset();
             setTimeout(() => {
-                result.style.display = "none";
+                result.style.display = "none"; 
             }, 3000);
         });
 });

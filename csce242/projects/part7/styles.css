@@ -101,14 +101,24 @@ footer {
   color: var(--button-block-hover);
 }
 
+/* Video */
+#video h2 {
+  text-align: center;
+}
+
+#video iframe {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  height: 500px;
+}
+
 /* Paragraph Page Blocks */
 .page-paragraph-box,
 .page-list-box,
 .page-paragraph-box-alternate {
   padding: 10px;
 }
-
-
 
 .color {
   background-color: var(--paragraph-alternate-box-color);
@@ -121,6 +131,7 @@ footer {
 .page-paragraph-box-alternate h2,
 .page-paragraph-box-alternate h3 {
   text-align: right;
+  color: var(--primary-font-color);
 }
 
 .paragraph-color {
@@ -170,6 +181,7 @@ footer {
 /* Guide Page Specific */
 .guidepage-ending h2 {
   text-align: center;
+  color: var(--primary-font-color);
 }
 
 .fourpage-container {
@@ -243,6 +255,10 @@ footer {
   border:2px solid var(--secondary-background-color);
 }
 
+#submission-box ul {
+  padding-left: 0;
+}
+
 /* About Me Page */
 .aboutme-img img {
   display: block;
@@ -258,7 +274,7 @@ footer {
 
 .contact-box1 p,
 .contact-box2 p {
-  padding-left: 15px;
+  padding-left: 20px;
 }
 
 .contact-box1 section,
@@ -267,14 +283,10 @@ footer {
   text-align: center;
 }
 
-.contact-box1 img,
-.contact-box2 img {
-  padding-right: 10px;
-}
-
 .contact-box1 h3, 
 .contact-box2 h3 {
   color: var(--primary-font-color);
+  padding-left: 20px;
 }
 
 
@@ -397,8 +409,10 @@ footer {
 }
 
 /* Contact Form */
-#form {
+.contact-form {
   width:max-content;
+  min-width: 65%;
+  max-width: 100%;
   border: 2px solid var(--secondary-background-color);
   border-radius: 25px;
   background-color: var(--paragraph-alternate-box-color);
@@ -421,6 +435,14 @@ footer {
 input, textarea {
   font-family: Arial, Helvetica, sans-serif;
   width:100%;
+}
+
+#main-input input, #main-input textarea {
+  margin-top: 15px;
+}
+
+#main-input label {
+  font-weight: bold;
 }
 
 #result {
@@ -568,6 +590,6 @@ input, textarea {
   .contact-box1,
   .contact-box2 {
     flex: 1;
-    width:100%;
+    margin-top: 15px;
   }
 }

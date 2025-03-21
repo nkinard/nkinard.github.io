@@ -59,31 +59,31 @@
         <h2>Contact Me</h2>
 
         <div> 
-          <form method="POST" id="form">
+          <form method="POST" id="form" class="contact-form">
 
             <input type="hidden" name="access_key" value="32c21653-ffe5-472d-9d74-bc05ecbffe6b">
         
             <section id="contactme-input">
               <div id="main-input" class="f-container">
                 <section id="contactme-name">
-                  <h3>Name: </h3>
-                  <input id="input-name" type="text" name="name" requried placeholder="John Doe">
+                  <label for="input-name">Name: </label>
+                  <input id="input-name" type="text" name="name" required placeholder="Nicholas Kinard">
                 </section>
                 <section id="contactme-email">
-                  <h3>Email: </h3>
-                  <input id="input-email" type="email" name="email" requried placeholder="Jdoe@email.com">
+                  <label for="input-email">Email: </label>
+                  <input id="input-email" type="email" name="email" required placeholder="nk@nkinard.com">
                 </section>
               </div>
               <div id="main-input">
                 <section>
-                  <h3>Title and/or Reason for Contact: </h3>
-                  <input id="input-reason" type="text" name="reason" requried placeholder="Title of message here">
+                  <label for="input-reason">Title and/or Reason for Contact: </label>
+                  <input id="input-reason" type="text" name="title" required placeholder="Title of message here">
                 </section>
               </div>
               <div id="main-input">
                 <section>
-                  <h3>Message: </h3>
-                  <textarea id="message" type="text" name="message" required placeholder="Enter message here"></textarea>
+                  <label for="input-message">Message: </label>
+                  <textarea id="input-message" name="message" required placeholder="Enter your message here"></textarea>
                 </section>
               </div>
             </section>
@@ -94,7 +94,7 @@
           </form>
         </div>
 
-        <div class="page-paragraph-box">
+        <div id="contact-icons" class="page-paragraph-box">
           <section class="f-container">
             <div class="contact-box1">
               <section class="f-container">
