@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Redfish",
+        "summary": "The Chattooga River is one of the southeast's longest rivers and cuts through Georgia, South Carolina, and North Carolina. This spectacular river is home to hundreds of different species of wildlife. The good thing about this river is that there is easy access at almost any point. There are times where the rapids pick up, but there are definitely spots for wading, kayaking, or bank casting. The best, and most popular, access to the river is off of State Highway 28.",
+        "outerimage": "redfish.jpg",
+        "innertopimage": "redfishdrawn.jpg",
+        "innerbottomimage": "redfishbig.jpg",
+        "useflies": "Since Redfish are saltwater, you are going to need to use saltwater fly patterns. These fish are going to bite completely different from the normal freshwater fish and be a little more aggressive. The best flies include the Clouser Deep Minnow, Deep Baitfish Shad, or even a Squimp.",
+        "topspots": "The best places to find these fish are in saltwater regions where bank or boat fishing is accessible. It is not reccommended to go wading for thein these fish. Top areas include the flats of Charleston and Beufort as well as the bays and lagoons in the Outer Banks."
+    },
+    {
+        "id": 2,
+        "name": "Trout",
+        "summary": "Trout are a very sought after species of fish in the Carolinas. There are many species of trout such as rainbow and brown, both with their own vibrant colors. These fish are mainly found in cooler waters such as streams and rivers in the mountains. To find these kind of fish, you are going to want to go to higher elevations such as the Appalachian mountains. Due to the elevations you may experience, these fish are most enjoyable to catch in the spring and fall time.",
+        "outerimage": "trout.jpg",
+        "innertopimage": "troutdrawn.jpg",
+        "innerbottomimage": "troutbig.jpg",
+        "useflies": "Trout are wild fish that love to fish on the natural food sources in the water. In the early Spring and Fall, trout love to bite on nymphs, which are imitations of immature stages of aquatic insects. During hatch times, it is more relevant to use dry flies, which imitate more adult insects. If you want to attract larger trout, you can try to use streamers, which imitate bigger aquatic prey like baitfish and crayfish.",
+        "topspots": "In the Carolinas, trout are best find in the mountain tops of Appalachia. In North Carolina, rivers like the Nantahala and Watauga are prime spots. In South Carolina, the Chattooga River in the right season can prove to be very rewarding for trout fishing."
+    },
+    {
+        "id": 3,
+        "name": "Sheepshead",
+        "summary": "Sheepshead fish are a common saltwater fish found piling up inshore around rocks and other underwater debris. They are known for their unique sharp teeth where they eat barnacles, oysters, and various types of shellfish. Due to this, you sohuld opt to use bait that mimics shellfish. The Sheepshead are easily recognizable with their distinctive black and white patters with large teeth. Further, Sheepshead are not very migratory and only move offshore to spawn in the Spring time.",
+        "outerimage": "sheepshead.jpg",
+        "innertopimage": "sheepdrawn.jpg",
+        "innerbottomimage": "sheepshbig.jpg",
+        "useflies": "Due to their eating habits, you are going to want to get flies that mimic shellfish and small saltwater prey. Flies like the Straight-Shooter Crab, Marsh Mohawk, and the Longhorn Crap are effective at catching this fish.",
+        "topspots": "Sheepshead like to pile up around rocks and other debris. Due to this fact, it is best to go to brackish coastal waters around wharfs, shipwrecks, rocks, or other pilings."
+    },
+    {
+        "id": 4,
+        "name": "Bass",
+        "summary": "Bass are a native species to the Carolinas and come in many Varieties such as smallmouth, largemouth, and spotted. One of the more abundant fish in this area, bass love to be found in lakes, ponds, streams, and rivers. Bass love to eat just about anything such as crayfish, frogs, insects, minnows, earthworms and sometimes even other bass. Due to their eating habits and predatory nature, bass can be dirty if the environment they live in allows for it. Make sure to always know your local body of water for any pollutants that may exist.",
+        "outerimage": "largemouthbass.jpg",
+        "innertopimage": "bassdrawn.jpg",
+        "innerbottomimage": "bassbig.jpg",
+        "useflies": "Catching bass has always been a good past-time in the Carolinas. Since these fish eat on anything in <i>their</i> environment, you need to match your fly to the surrounding ecosystem. However, to get started, some general flies that are sure workers are Woolly Buggers, Hoppers, Poppers, and Damselfy patterns.",
+        "topspots": "There is almost no spot in the Carolians that does not house some kind of bass. To be more accurate, bass do love to be in ponds, lakes, and streams and will generally pile up under rocks, twigs, and anything that provides cover. Their strategy as a predator is to hide in small holes and jump out at prey that swims by."
+    }
+]

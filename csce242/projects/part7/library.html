@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project Website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="content">
+      <header>
+        <section class="header-logo">
+          <img src="images/logo.png" alt="logo" />
+          <h1>The Carolinian Flycaster</h1>
+        </section>
+        <nav id="main-nav">
+          <div id="hamburger-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <ul id="nav-list" class="hide-small">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="guide.html">Fly Fishing Guide</a></li>
+            <li class="current-page-border"><a href="library.html">Fish and Fly Library</a></li>
+            <li><a href="spotlight.html">Fisherman's Spotlight</a></li>
+            <li><a href="about.html">About Me</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main id="main-content">
+
+        <div class="page-paragraph-content">
+          <section class="f-container">
+            <div >
+              <h2>The Complete Fish and Fly Library of the Carolinas</h2>
+              <p>
+                Welcome to the Fish and Fly Library, a comprehensive resource
+                giving quick information on fishes and flies to see and use in
+                the Carolinas.
+              </p>
+              <p>
+                This library is sectioned off into the Fly Library and the Fish
+                Library. In the Fish Library, there is information on the fish
+                itself, its best flies to be used, and where to find them. In
+                the Fly Library, there is information on the fly itself, its
+                main purpose, and what fish really love them. It is important to
+                know that this guide is meant for the Carolinas, so species
+                around the world may act different to this information.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <div id="fishlib" class="page-buttons-stack">
+          <h2>Fish Library</h2>
+          <div id="galleryfish" class="page-buttons-stack"></div>
+        </div>
+        <div id="flylib" class="page-buttons-stack">
+          <h2>Fly Library</h2>
+          <div id="galleryfly" class="page-buttons-stack"></div>
+        </div>
+        
+      </main>
+      <footer>
+        <p>&copy; Nicholas Kinard</p>
+      </footer>
+    </div>
+    <script src="libraryfish-script.js"></script>
+    <script src="libraryfly-script.js"></script>
+  </body>
+</html>
