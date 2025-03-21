@@ -66,59 +66,69 @@
                 similar to this. Well, start getting in!
               </p>
             </div>
-            <div id="submission-box" class="page-list-box submissions">
-              <h3>Submit new Spotlight:</h3>
-              <form method="POST" id="form">
-                <input type="hidden" name="access_key" value="32c21653-ffe5-472d-9d74-bc05ecbffe6b">
-                <ul>
-                  <li>
-                    Name of Location: <input id="locationname" type="text" name="location" required/>
-                  </li>
-                  <li>
-                    Longitude of Location: <input id="longloc" type="text" name="longitude" required/>
-                  </li>
-                  <li>Latitude of Location: <input id="latloc" type="text" name="latitude" required/></li>
-                  <li>
-                    Types of Fish Caught: <input id="fishcaught" type="text" name="fish caught" required/>
-                  </li>
-                  <li>
-                    Types of Flies Used: <input id="fliesused" type="text" name="flies used" required/>
-                  </li>
-                  <li>
-                    What Body of Water: <input id="bodywatertype" type="text" name="body of water" required/>
-                  </li>
-                  <li>
-                    Public or Private Entry:
-                    <input id="publicoprivate" type="text" name="entry type" required/>
-                  </li>
-                  <li>
-                    Overall Rating:<input
-                      id="rating"
-                      type="number"
-                      max="5"
-                      min="1"
-                      name="rating"
-                      required />
-                  </li>
-                  <li>
-                    Image of River:
-                    <input id="riverimage" type="file" accept="image/*" name="image of river" required/>
-                  </li> 
-                  <li>
-                    Image of Fishing Hole:
-                    <input id="holeimage" type="file" accept="image/*" name="image of fishing hole" required/>
-                  </li> 
-                  <li>
-                    Best Season to Fish: <input id="bestmonths" type="text" name="season" required/>
-                  </li>
-                  <li></li>
-                </ul>
-                <div id="result"></div>
-                <button id="btn-submit" type="submit">Submit Form</button>
-              </form>
-            </div>
           </section>
+          <div id="submission-box" class="page-list-box submissions">
+            <h3>Submit new Spotlight:</h3>
+            <form method="POST" id="form">
+              <input type="hidden" name="access_key" value="32c21653-ffe5-472d-9d74-bc05ecbffe6b">
+              <div id="spotlight-form-container" class="f-container">
+                <section>
+                  <ul>
+                    <li>
+                      Name of Location: <input id="locationname" type="text" name="location" required/>
+                    </li>
+                    <li>
+                      Longitude of Location: <input id="longloc" type="text" name="longitude" required/>
+                    </li>
+                    <li>Latitude of Location: <input id="latloc" type="text" name="latitude" required/></li>
+                    <li>
+                      Types of Fish Caught: <input id="fishcaught" type="text" name="fish" required/>
+                    </li>
+                    <li>
+                      Types of Flies Used: <input id="fliesused" type="text" name="flies" required/>
+                    </li>
+                    <li>
+                      What Body of Water: <input id="bodywatertype" type="text" name="bodywater" required/>
+                    </li>
+                  </ul>
+                </section>
+                <section>
+                  <ul>
+                    <li>
+                      Public or Private Entry:
+                      <input id="publicoprivate" type="text" name="entrytype" required/>
+                    </li>
+                    <li>
+                      Overall Rating:<input
+                        id="rating"
+                        type="number"
+                        max="5"
+                        min="1"
+                        name="rating"
+                        required />
+                    </li>
+                    <li>
+                      Image of River:
+                      <input id="riverimage" type="file" accept="image/*" name="imageriver" required/>
+                    </li> 
+                    <li>
+                      Image of Fishing Hole:
+                      <input id="holeimage" type="file" accept="image/*" name="imagehole" required/>
+                    </li> 
+                    <li>
+                      Best Season to Fish: <input id="bestmonths" type="text" name="season" required/>
+                    </li>
+                    <li></li>
+                  </ul>
+                </section>
+              </div>
+              <div id="results" class=""></div>
+              <button id="btn-submit" type="submit">Submit Form</button>
+            </form>
+          </div>
         </div>
+
+        
       </main>
       <footer>
         <p>&copy; Nicholas Kinard</p>

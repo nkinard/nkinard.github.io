@@ -259,6 +259,15 @@ footer {
   padding-left: 0;
 }
 
+#results {
+  color: var(--primary-font-color);
+  padding: 15px;
+}
+
+.resultscontainer {
+  justify-content: space-evenly;
+}
+
 /* About Me Page */
 .aboutme-img img {
   display: block;
@@ -591,5 +600,9 @@ input, textarea {
   .contact-box2 {
     flex: 1;
     margin-top: 15px;
+  }
+
+  #spotlight-form-container {
+    justify-content: space-evenly;
   }
 }

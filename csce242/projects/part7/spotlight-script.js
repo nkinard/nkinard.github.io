@@ -6,70 +6,116 @@ document.getElementById("hamburger-toggle").onclick = () => {
     document.getElementById("nav-list").classList.toggle("hide-small");
   };
 
-//for the form section 
-//source from https://web3forms.com/
-const form = document.getElementById('form');
-const result = document.getElementById('result');
+//for the form section from class video
+const submitSpotlight = (e) => {
+    e.preventDefault();
+    const results = document.getElementById("results");
 
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  const formData = new FormData(form);
-  const object = Object.fromEntries(formData);
-  const json = JSON.stringify(object);
-  result.style.display = "block"; //add this in, allowed for multiple entries on one refresh
-  result.innerHTML = "Please wait..."
+    const form = document.getElementById("form");
+    const location = form.elements["location"].value;
+    const long = form.elements["longitude"].value;
+    const lat = form.elements["latitude"].value;
+    const fish = form.elements["fish"].value;
+    const flies = form.elements["flies"].value;
+    const bodywater = form.elements["bodywater"].value;
+    const entry = form.elements["entrytype"].value;
+    const rating = form.elements["rating"].value;
+    const imageR = form.elements["imageriver"].value;
+    const imageH = form.elements["imagehole"].value;
+    const season = form.elements["season"].value;
 
-    fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: json
-        })
-        .then(async (response) => {
-            let json = await response.json();
-            if (response.status == 200) {
-                result.innerHTML = "Form submitted successfully";
-            } else {
-                console.log(response);
-                result.innerHTML = json.message;
-            }
-        })
-        .catch(error => {
-            console.log(error);
-            result.innerHTML = "Something went wrong!";
-        })
-        .then(function() {
-            form.reset();
-            setTimeout(() => {
-                result.style.display = "none"; 
-            }, 3000);
-        });
-});
-  
+    console.log(location);
+    console.log(long);
+    console.log(lat);
+    console.log(fish);
+    console.log(flies);
+    console.log(bodywater);
+    console.log(entry);
+    console.log(rating);
+    console.log(imageR);
+    console.log(imageH);
+    console.log(season);
+
+    form.reset();
+
+    const h2 = document.createElement("h2");
+    h2.innerHTML = "Thank you for your submission! Responses are monitored."
+    h2.style.fontWeight = "bold";
+    const info = document.createElement("p");
+    info.innerHTML = "Information: "
+    results.append(h2);
+    results.append(info);
+    const div1 = document.createElement("div");
+    const div2 = document.createElement("div");
+    const sect = document.createElement("section");
+    sect.classList = "f-container resultscontainer"
+    results.append(sect);
+    sect.append(div1);
+    sect.append(div2);
+
+    const p1 = document.createElement("p");
+    p1.innerHTML = `Name: ${location}`;
+    div1.append(p1);
+    const p2 = document.createElement("p");
+    p2.innerHTML = `Longitude: ${long}`;
+    div1.append(p2);
+    const p3 = document.createElement("p");
+    p3.innerHTML = `Latitude: ${lat}`;
+    div1.append(p3);
+    const p4 = document.createElement("p");
+    p4.innerHTML = `Fish Caught: ${fish}`;
+    div1.append(p4);
+    const p5 = document.createElement("p");
+    p5.innerHTML = `Flies Used: ${flies}`;
+    div1.append(p5);
+    const p6 = document.createElement("p");
+    p6.innerHTML = `Body of Water: ${bodywater}`;
+    div1.append(p6);
+    const p7 = document.createElement("p");
+    p7.innerHTML = `Entry Type: ${entry}`;
+    div2.append(p7);
+    const p8 = document.createElement("p");
+    p8.innerHTML = `Rating: ${rating}`;
+    div2.append(p8);
+    const p9 = document.createElement("p");
+    p9.innerHTML = `Image of River: ${imageR}`;
+    div2.append(p9);
+    const p10 = document.createElement("p");
+    p10.innerHTML = `Image of Hole: ${imageH}`;
+    div2.append(p10);
+    const p11 = document.createElement("p");
+    p11.innerHTML = `Seasons to Fish: ${season}`;
+    div2.append(p11);
+
+
+    //this came from w3schools, allows a timer so that the information submission goes away!
+    setTimeout(() => { results.innerHTML = ""; }, 10000);
+};
+document.getElementById("form").onsubmit = submitSpotlight;
+
 //call in my json file
 const getSpotlight = async () => {
-const url = "https://nkinard.github.io/csce242/projects/part6/json/spotlight.json";
-    try {
-        const response = await fetch(url);
-        return response.json();
-    } catch (error) {
-        console.log(error);
-    }
-};
-//map for modal
-const getMap = async (latitude, longitude) => {
-    try {
-        return (
-        await fetch(
-            `https://maps.google.com/maps?q=${latitude},${longitude}&t=&z=15&ie=UTF8&iwloc=&&output=embed`
-        )
-        ).url;
-    } catch (error) {
-        console.log(error);
-    }
-};
+    const url = "https://nkinard.github.io/csce242/projects/part6/json/spotlight.json";
+        try {
+            const response = await fetch(url);
+            return response.json();
+        } catch (error) {
+            console.log(error);
+        }
+    };
+    //map for modal
+    const getMap = async (latitude, longitude) => {
+        try {
+            return (
+            await fetch(
+                `https://maps.google.com/maps?q=${latitude},${longitude}&t=&z=15&ie=UTF8&iwloc=&&output=embed`
+            )
+            ).url;
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
 //this takes in my json and parses
 const showSpotlight = async() => {
     const spotlightDesign = await getSpotlight();
